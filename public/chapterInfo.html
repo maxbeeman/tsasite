@@ -43,6 +43,8 @@
             /*box-shadow: 0px 3px 2px #370031;*/
         }
         .footer {
+            position: relative;
+            z-index: 2;
             text-align: left;
             background-color: #820300;
             padding: 3%;
@@ -113,6 +115,7 @@
         /* RELAVENT THINGIES **********************************************/
         body {
             background-color: #002152;
+            padding: 0;
         }
         p {
             color: #002152;
@@ -123,29 +126,54 @@
             width: 100%;
             background-color: #002152;
         }
+        div.logo_and_motto {
+            text-align: center;
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 1px solid #ffffff;
+        }
         img.logo{
+            position: relative;
             height: 300px;
             width: 500px;
+            border: 1px solid #ffffff;
             text-align: center;
+            display: inline;
         }
         div.text_box {
-            margin: 5px;
             z-index: 1;
             height: auto;
             padding: 10px;
-            width: 500px;
-            height: 300px;
+            width: 100%;
+            height: auto;
             position: relative;
             background-color: #FFFFFF;
+            display: block;
         }
+
+        #motto {
+            top: -200px;
+            margin-top: 0;
+            height: 300px;
+            display: inline-block;
+            width: 40%;
+        }
+
         h3 {
             font-family: Futura, Verdana, sans-serif;
             font-size: 1.5em;
             margin-top: 0px;
             color:  #820300;
         }
-        td {
-            display: inline-block;
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+        div.motto {
+            background-color: #ffffff;
+            padding: 10px;
         }
 
 
@@ -186,34 +214,55 @@
         <h5>Click a box below to view the chapter's motto or creed!</h5>
     </div>
 
-    <div class="main">
-        <table>
-            <td>
-                <img class="logo" src="public/images/TSA-Technology-Student-Association-Emblem.png"/>
-            </td>
-            <td>
-                <div class="text_box">
-                    <h3>Motto</h3>
-                    <p class="motto_text">
-                        Learning to Live in a Technical World
-                    </p>
-                </div>
-            </td>
-            <td>
-                <div class="text_box">
-                    <h3>Creed</h3>
-                    <p class="creed_text">
-                        I believe that Technology Education holds an important place in my life in the technical world.
-                        <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
-                        <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
-                        <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
-                        <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
-                        <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
-                    </p>
-                </div>
-            </td>
-        </table>
+
+    <div class="logo-motto">
+        <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+        <div  class="motto">
+            <h3>Motto</h3>
+            <p class="motto_text">
+                Learning to Live in a Technical World
+            </p>
+        </div>
+
     </div>
+
+    <h3>Creed</h3>
+    <p class="creed_text">
+        I believe that Technology Education holds an important place in my life in the technical world.
+        <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
+        <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
+        <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
+        <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
+        <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
+    </p>
+
+    <!--
+    <div class="main">
+        <div class="logo_and_motto">
+            <div class="text_box" id="motto">
+                <h3>Motto</h3>
+                <p class="motto_text">
+                    Learning to Live in a Technical World
+                </p>
+            </div>
+            <img class="logo" src="public/images/TSA-Technology-Student-Association-Emblem.png"/>
+
+        </div>
+
+        <div class="text_box">
+            <h3>Creed</h3>
+            <p class="creed_text">
+                I believe that Technology Education holds an important place in my life in the technical world.
+                <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
+                <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
+                <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
+                <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
+                <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
+            </p>
+        </div>
+
+    </div>
+    -->
 
     <div class="footer">
         <h2>Contact</h2>
