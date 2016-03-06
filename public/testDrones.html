@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Titulo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <?php include_once("testCTEBlocks6.html"); ?>
+    <script>
+        $(document).ready(function() {
+
+            $(".delivery").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.delivery_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".internet").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.internet_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".news").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.news_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".photography").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.photography_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".agriculture").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.agriculture_image").toggleClass("visible");
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".hollywood").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.hollywood_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".hurricane").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.hurricane_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".threeD_mapping").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.threeD_mapping_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".monitoring").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.monitoring_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".other").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.other_image").toggleClass("visible");
+
+            });
+
+        });
+        $(document).ready(function() {
+
+            $(".educational").click(function() {
+                $("div.display img").removeClass("visible");
+                $("img.educational_image").toggleClass("visible");
+
+            });
+
+        });
+
+    </script>
+    <style>
+
+        /* HEADER AND FOOTER **********************************************/
+        h5 {
+            color: #A1AC4E;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        h2 {
+            color: #ffffff;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        #main_title {
+            font-size: 2.5em;
+        }
+        table {
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+            background-color: #BE3B38;
+            padding: 3%;
+        }
+        .footer {
+            text-align: left;
+            background-color: #BE3B38;
+            padding: 3%;
+        }
+        .email:hover {
+            color: #A1AC4E;
+            text-decoration: underline;
+        }
+
+        /* MENU **********************************************/
+        .menu {
+            text-align: center;
+            background-color: #ffffff;
+            height: 47px;
+            width: 100%;
+            min-width: 800px;
+            position: fixed;
+            z-index: 1;
+        }
+        .menu_item {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0%;
+        }
+        .menu_item:hover {
+            background-color: #A1AC4E;
+        }
+        .menu_item:hover .page_list {
+            visibility: visible;
+        }
+        .menu_item:hover .page_list a {
+            visibility: visible;
+        }
+
+        h1 {
+            font-family: Futura, Verdana, sans-serif;
+            color: #3B4B7F;
+        }
+        .buffer {
+            display: inline-block;
+            width: 5%;
+            background-color: inherit;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0px;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: #ffffff;
+        }
+        .page_list a {
+            text-decoration: none;
+            visibility: hidden;
+            display: block;
+            font-size: 0.5em;
+            color: #3B4B7F;
+            padding: 1%;
+        }
+        .page_list a:hover {
+            background-color: #A1AC4E;
+        }
+        /* RELAVENT THINGIES **********************************************/
+        body {
+            /* LAYOUT */
+            margin: 0;
+            padding: 0;
+            /* STYLE */
+            background-color: #3B4B7F;
+        }
+        h3 {
+            color: #BE3B38;
+            font-weight: bold;
+            font-family: Futura, Verdana, sans-serif;
+            font-size: 1.5em;
+        }
+        p {
+            color: #3B4B7F;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        div.main {
+            height: 1000px;
+            width: 100%;
+            background-color: #8C3ED1;
+        }
+        ul.use_titles{
+            font-family: Futura, Verdana, sans-serif;
+            text-align: center;
+
+        }
+        ul.use_titles li {
+            padding-left: 25px;
+            padding-right: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            position: relative;
+            background-color: #7F2E4F;
+            display: inline-block;
+            margin:0;
+            margin-top: 5px;
+
+        }
+        .use:hover{
+            background-color: #3B4B7F;
+        }
+
+        div.display{
+            height: 100px;
+            width:100%;
+            text-align: center;
+        }
+        div.display img {
+
+            height: 100px;
+            width: 100px;
+            visibility: hidden;
+
+        }
+        div.display img.delivery_image {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        div.display img.internet_image {
+
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.display img.news_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.photography_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.agriculture_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.hollywood_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.hurricane_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.threeD_mapping_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.monitoring_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.other_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.display img.educational_image{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div.full_position{
+            margin: 50px;
+        }
+        div.display img.visible {
+            visibility: visible;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="buffer"></div>
+    <h1 class="menu_item" id="cte">CTE Courses
+        <div class="page_list">
+            <a href="">Technology</a>
+            <a href="">Family and Consumer Sciences</a>
+            <a href="">Business and Marketing</a>
+        </div>
+    </h1>
+    <h1 class="menu_item" id="tsa">TSA Chapter
+        <div class="page_list">
+            <a href="">Motto & Creed</a>
+            <a href="">Activities</a>
+            <a href="">Officers</a>
+        </div></h1>
+    <h1 class="menu_item" id="drones">Solution -- Drones
+        <div class="page_list">
+            <a href="">Uses</a>
+            <a href="">Technology</a>
+            <a href="">Controversy</a>
+        </div></h1>
+    <div class="buffer"></div>
+
+</div>
+<div class="header">
+    <h2 id="main_title">Juanita High School Technology Courses</h2>
+    <h5>Hover over or tap the blocks for more information!</h5>
+</div>
+<div class="main">
+
+    <div class="display" style="position:relative; left:0; top:0;">
+        <img class = "delivery_image" src="public/images/juanitacrest.png" style="position:absolute; left: 50%; top:5%"/>
+        <img class = "internet_image" src = "public/images/up-house_side.jpg" style="position:absolute; left: 50%; top:5%"/>
+        <img class = "news_image" src = "" style="position:absolute; left: 50%; top:5%"/>
+        <img class = "photography_image" src = ""style="position:absolute; left: 50%; top:5%"/>
+        <img class = "agriculture_image" src = ""style="position:absolute; left: 50%; top:5%"/>
+        <img class = "hollywood_image" src = ""style="position:absolute; left: 50%; top:5%"/>
+        <img class = "hurricane_image" src = ""style="position:absolute; left: 50%; top:5%"/>
+        <img class = "threeD_mapping_image" src = ""style="position:absolute; left: 50%; top:5%"/>
+        <img class = "monitoring_image" src = "" style = "position:absolute; left:50%; top:5%"/>
+        <img class = "other_image" src = "" style = "position:absolute; left:50%; top:5%"/>
+        <img class = "educational_image" src = ""style = "position:absolute; left:50%; top:5%"/>
+    </div>
+    <div class = "labels" style = "position: relative; left:0; top:5%">
+        <ul class="use_titles">
+            <div class = "full_position">
+                <ul class = "use_titles">
+                    <li class="use commercial delivery">Delivery</li>
+                    <li class="use commercial internet">Internet Service</li>
+                    <li class="use commercial news">News</li>
+                    <li class="use commercial photography">Photography</li>
+                    <li class="use commercial agriculture">Agriculture</li>
+                    <li class="use commercial hollywood">Hollywood</li>
+                    <li class="use research hurricane">Hurricane Tracking</li>
+                    <li class="use research threeD_mapping">3D Mapping</li>
+                    <li class="use research monitoring">Monitoring and Protecting Wildlife</li>
+                    <li class="use research other">Other</li>
+                    <li class="use educational educational">Educational</li>
+                </ul>
+            </div>
+
+            <div class="info">
+                <h4>This is info about commercial stuff and its color!</h4>
+                <h4>And this one is about research!</h4>
+
+            </div>
+        </ul>
+    </div>
+</div>
+<div class="footer">
+    <h2>Contact</h2>
+    <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science)</h5>
+    <h5><span class="email">gshelton@lwsd.org</span> | 000-000-0000</h5>
+</div>
+</body>
+</html>
+
+<!--
+bright blue: #11E8FF
+green-blue: #45C4D1
+dark grey: #2E2E2E
+grey: #404040
+light grey: 757575
+very light grey: #C9C9C9
+
+
+
+nice pink color: #7F2854
+brighter: #7F2E4F
+dark grey: #2E2E2E
+med grey: #404040
+med light grey: #757575
+light grey: #C9C9C9
+
+
+tanzanite: #3B4B7F
+optimum blue: #455A80
+
+flirt alert: #BE3B38
+
+intoxication: #A1AC4E
+laser: #B5AF51
+
+
+-->
+

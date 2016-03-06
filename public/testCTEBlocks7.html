@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: #FF918B;
+        }
+        ul{
+            list-style-type: none;
+            margin:0;
+            padding: 0;
+            background-color: #9ACEFC;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: inline-block;
+            color: #FEFFF4;
+            text-align: center;
+            padding: 14px 30px;
+            width: 70px;
+            height: 15px;
+            text-decoration: none;
+        }
+        li a:hover{
+            background-color: #46A2F5;
+        }
+        .active{
+            background-color: #FA5850;
+        }
+        .dropbtn {
+            background-color: #9ACEFC;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown{
+            position: relative;
+            display: inline-block;
+
+        }
+        .dropdown-content{
+            display: none;
+            text-align: center;
+            position:absolute;
+            background-color:#46A2F5;
+            height: 150%;
+            min-width:100%;
+            padding: 5% 0%;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            margin-top:40px;
+        }
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            width: 70px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #90C4CC;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #46A2F5;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <div class="dropdown">
+        <li><a href="#" class="dropbtn">Dropdown</a></li>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+
+    <div class="dropdown">
+        <li><a href="#" class="dropbtn">About</a></li>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</ul>
+<div id="header">
+    <h1>Juanita High</h1>
+</div>
+
+<p>My first paragraph.</p>
+<img src="public/images/juanitacrest.png" style="width:81px;height:80px">
+
+</body>
+</html>
+Hover dropdown: http://www.w3schools.com/howto/howto_css_dropdown.asp
+Color Scheme: https://color.adobe.com/create/color-wheel/?base=2&rule=Triad&selected=0&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.98,0.3451352293440321,0.3135278513943025,0.9970073689888035,1,0.9552871532197454,1,0.5668216928926024,0.5452554773689078,0.6043601211353891,0.8081539495953154,0.99,0.27424865264240955,0.6366382811761839,0.96&swatchOrder=0,1,2,3,4

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <style>
+        div {
+            height: 200px;
+            width: 399px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+           /* $('#my_div').myfunction(); */
+            /*$("div").up();
+            $("div").hover(blue($(this)));
+            $("#f").on('click', function() {
+                blue($(this));
+            });*/
+            $("div").click(function() {
+                $(this).blue();
+            });
+
+
+
+        });
+        function blue() {
+            this.css("background-color", "blue");
+        }
+        function myFunction() {
+            var that = $(this);
+            that.css("background-color", "blue");
+        }
+        (function($) {
+                    $.fn.up = function() {
+                        $(this).css("height", "600px");
+                        return this;
+                    };
+                }) ( jQuery );
+
+        (function( $ ){
+            $.fn.myfunction = function() {
+                $(this).css("background-color", "blue");
+                return this;
+            };
+        })( jQuery );
+
+    </script>
+</head>
+<body>
+<div id="wordlist">
+    <div id="a"></div>
+    <div id="b">
+        <div id="e"></div>
+        <div id="f">child</div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $("td.course_block").hover(function() {
+                var $info = $(this).children("div.course_info");
+
+                $info.fadeTo("fast", 1);
+                $info.removeClass("hidden");
+                $info.animate({
+                    top: '-=20px'
+                }, 200);
+                /* var $pic = $(this).children("div.pic");
+                $pic.stop();
+                $pic.animate({
+                    width: '25%',
+                    height: '18%',
+                }, 500); */
+
+            }, function() {
+                var $info = $(this).children("div.course_info");
+                $info.fadeTo("fast", 0);
+                /* var $pic = $(this).children("div.pic");
+                $pic.stop();
+                $pic.animate({
+                    width: '75%',
+                    height: '50%',
+                }, 500, function() {
+
+                    /* $text.css('visibility', 'hidden'); */ /*
+                }); */
+            });
+        });
+    </script>
+
+    <style>
+        div.pic {
+            position: relative;
+            border: 2px solid blue;
+            width: 75%;
+            height: 50%;
+            margin: 10% 10% 10% 10%;
+        }
+        td.course_block {
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            margin: 1%;
+            border: 2px solid black;
+        }
+
+        div.course_block {
+            display: inline-block;
+            height: 300px;
+            width: 300px;
+            margin: 1%;
+            border: 2px solid black;
+
+        }
+
+        .course_info {
+            background-image: url("public/images/gradient.png");
+            background-size: 100% 100%;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+        }
+
+        div#first-row {
+            margin-top: 10%;
+        }
+
+        div#second-row {
+            margin-left: 15%;
+        }
+
+        div#second-col {
+            margin-left: 10%;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <table>
+        <td class="course_block">
+            <div class="pic">
+                <img src="public/images/juanitacrest.png" />
+            </div>
+            <div class="course_info" style="opacity: 0">
+                <h1 style="padding:2%">Course title</h1>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="course_block">
+            <div class="pic">
+                <img src="public/images/juanitacrest.png" />
+            </div>
+            <div class="course_info" style="opacity: 0">
+                <h1 style="padding:2%">Course title</h1>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="course_block">
+            <div class="pic">
+                <img src="public/images/juanitacrest.png" />
+            </div>
+            <div class="course_info" style="opacity: 0">
+                <h1 style="padding:2%">Course title</h1>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="course_block">
+            <div class="pic">
+                <img src="public/images/juanitacrest.png" />
+            </div>
+            <div class="course_info" style="opacity: 0">
+                <h1 style="padding:2%">Course title</h1>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="course_block">
+            <div class="pic">
+                <img src="public/images/juanitacrest.png" />
+            </div>
+            <div class="course_info" style="opacity: 0">
+                <h1 style="padding:2%">Course title</h1>
+                <p>Course description.</p>
+            </div>
+        </td>
+
+    </table>
+
+    <div class="course_block" id="first-row">
+        <div class="pic">
+            <img src="public/images/juanitacrest.png" />
+        </div>
+        <div class="course_info" style="opacity: 0">
+            <h1 style="padding:2%">Course title</h1>
+            <p>Course description.</p>
+        </div>
+    </div>
+
+    <!--
+    <div class="course_block" id="first-row">
+        <div class="pic">
+            <img src="public/images/juanitacrest.png" />
+        </div>
+        <div class="course_info" style="opacity: 0">
+            <h1 style="padding:2%">Course title</h1>
+            <p>Course description.</p>
+        </div>
+    </div>
+    <div class="course_block" id="second-col">
+        <div class="pic">
+            <img src="public/images/juanitacrest.png" />
+        </div>
+        <div class="course_info" style="opacity: 0">
+            <h1 style="padding:2%">Course title</h1>
+            <p>Course description.</p>
+        </div>
+    </div>
+    <div class="course_block" id="second-row">
+        <div class="pic">
+            <img src="public/images/juanitacrest.png" />
+        </div>
+        <div class="course_info" style="opacity: 0">
+            <h1 style="padding:2%">Course title</h1>
+            <p>Course description.</p>
+        </div>
+    </div>
+    -->
+
+</body>
+</html>

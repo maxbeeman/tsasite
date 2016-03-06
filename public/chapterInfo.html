@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Titulo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <?php include_once("testCTEBlocks6.html"); ?>
+    <script>
+        $(document).ready(function() {
+
+            $("li.use").click(function() {
+                $("li.use").removeAttr('id', 'selected');
+                $(this).attr('id', 'selected')
+                $("div.description p").removeClass("visible");
+                $("p.delivery_text").toggleClass("visible");
+
+            });
+
+        });
+
+    </script>
+    <style>
+
+        /* HEADER AND FOOTER **********************************************/
+        h5 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        #main_title {
+            font-size: 2.5em;
+        }
+        table {
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+            background-color: #820300;/* #820300; */
+            padding: 3%;
+            /*box-shadow: 0px 3px 2px #370031;*/
+        }
+        .footer {
+            text-align: left;
+            background-color: #820300;
+            padding: 3%;
+            /* box-shadow: 0px -3px 2px #370031;*/
+        }
+        .email:hover {
+            color: #FFEE9B;
+            text-decoration: underline;
+        }
+
+        /* MENU **********************************************/
+        .menu {
+            text-align: center;
+            background-color: #FFFFFF;
+            height: 47px;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            min-width: 800px;
+        }
+        .menu_item {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0%;
+        }
+        .menu_item:hover {
+            background-color: #FFEE9B;
+        }
+        .menu_item:hover .page_list {
+            visibility: visible;
+        }
+        .menu_item:hover .page_list a {
+            visibility: visible;
+        }
+
+        h1 {
+            font-family: Futura, Verdana, sans-serif;
+            color: #002152;
+        }
+        .buffer {
+            display: inline-block;
+            width: 5%;
+            background-color: inherit;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0px;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        .page_list a {
+            text-decoration: none;
+            visibility: hidden;
+            display: block;
+            font-size: 0.5em;
+            color: #002152;
+            padding: 1%;
+        }
+        .page_list a:hover {
+            background-color: #FFEE9B;
+        }
+        /* RELAVENT THINGIES **********************************************/
+        body {
+            background-color: #002152;
+        }
+        p {
+            color: #002152;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        div.main {
+            height: auto;
+            width: 100%;
+            background-color: #002152;
+        }
+        img.logo{
+            height: 300px;
+            width: 500px;
+            text-align: center;
+        }
+        div.text_box {
+            margin: 5px;
+            z-index: 1;
+            height: auto;
+            padding: 10px;
+            width: 500px;
+            height: 300px;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+        h3 {
+            font-family: Futura, Verdana, sans-serif;
+            font-size: 1.5em;
+            margin-top: 0px;
+            color:  #820300;
+        }
+        td {
+            display: inline-block;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div class="buffer"></div>
+        <h1 class="menu_item" id="cte">CTE Courses
+            <div class="page_list">
+                <a href="">Technology</a>
+                <a href="">Family and Consumer Sciences</a>
+                <a href="">Business and Marketing</a>
+            </div>
+        </h1>
+        <h1 class="menu_item" id="tsa">TSA Chapter
+            <div class="page_list">
+                <a href="">Motto & Creed</a>
+                <a href="">Activities</a>
+                <a href="">Officers</a>
+            </div></h1>
+        <h1 class="menu_item" id="drones">Solution -- Drones
+            <div class="page_list">
+                <a href="">Uses</a>
+                <a href="">Technology</a>
+                <a href="">Controversy</a>
+            </div></h1>
+        <div class="buffer"></div>
+    </div>
+
+
+<!-- MAIN PAGE INFO ------------------------------------------------------------------->
+
+    <div class="header">
+        <h2 id="main_title">TSA Chapter Info</h2>
+        <h5>Click a box below to view the chapter's motto or creed!</h5>
+    </div>
+
+    <div class="main">
+        <table>
+            <td>
+                <img class="logo" src="public/images/TSA-Technology-Student-Association-Emblem.png"/>
+            </td>
+            <td>
+                <div class="text_box">
+                    <h3>Motto</h3>
+                    <p class="motto_text">
+                        Learning to Live in a Technical World
+                    </p>
+                </div>
+            </td>
+            <td>
+                <div class="text_box">
+                    <h3>Creed</h3>
+                    <p class="creed_text">
+                        I believe that Technology Education holds an important place in my life in the technical world.
+                        <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
+                        <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
+                        <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
+                        <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
+                        <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
+                    </p>
+                </div>
+            </td>
+        </table>
+    </div>
+
+    <div class="footer">
+        <h2>Contact</h2>
+        <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science)</h5>
+        <h5><span class="email">gshelton@lwsd.org</span> | 000-000-0000</h5>
+    </div>
+
+</body>
+</html>
+
+<!--
+bright blue: #11E8FF
+green-blue: #45C4D1
+dark grey: #2E2E2E
+grey: #404040
+light grey: 757575
+very light grey: #C9C9C9
+
+
+
+nice pink color: #7F2854
+brighter: #7F2E4F
+dark grey: #2E2E2E
+med grey: #404040
+med light grey: #757575
+light grey: #C9C9C9
+
+
+tanzanite: #3B4B7F
+optimum blue: #455A80
+
+flirt alert: #BE3B38
+
+intoxication: #A1AC4E
+laser: #B5AF51
+
+
+-->
+

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Titulo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            $("td.cte_course_block").hover(function () {
+                var $info = $(this).children("div.course_info");
+                var $pic = $(this).children("a");
+                /*
+                $info.animate({
+                    opacity: '1'
+                }, 100, function () {
+                    $pic.stop();
+                    $pic.animate({
+                        width: '25%',
+                        height: '18%',
+                        margin: '10% 0% 0% 10%'
+                    }, 500);
+                });
+                */
+
+                $info.animate({
+                    opacity: '1'
+                }, 100);
+                $pic.stop();
+                $pic.animate({
+                    width: '25%',
+                    height: '18%',
+                    margin: '10% 0% 0% 10%'
+                }, 500);
+
+                /*
+                 $pic.remove();
+
+                 $pic.css("margin", '50%');
+                 $pic.height("25%");
+                 $pic.width("18%");
+
+                 $("div.cte_course_block img").height('25%');
+                 $("div.cte_course_block img").width('18%');
+
+                $("div.cte_course_block h3").addClass("active");
+                */
+            }, function() {
+                var $info = $(this).children("div.course_info");
+                var $pic = $(this).children("a");
+                $info.animate({
+                    opacity: '0'
+                }, 400);
+                $pic.stop();
+                $pic.animate({
+                    width: '75%',
+                    height: '50%',
+                    margin: '12.5%'
+                }, 500);
+                /*
+                $(this).children("div.cte_course_block img").height('75%');
+                $(this).children("div.cte_course_block img").width('50%');
+                */
+
+                /*
+                var $title = $(this).children("h3");
+                var $text = $(this).children("p");
+
+                var $pic = $(this).children("a");
+                $pic.stop();
+                $pic.animate({
+                    width: '75%',
+                    height: '50%',
+                    margin: '12.5%'
+                }, 500, function() {
+
+                    /* $text.css('visibility', 'hidden'); */
+                /*
+                });
+                $text.fadeTo("fast", 0.0);
+                $title.fadeTo("fast", 0.0);
+            });*/
+            });
+        });
+    </script>
+    <style>
+        td.cte_course_block {
+            /* LAYOUT */
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            margin: 3%;
+            position: relative;
+            /* STYLE */
+            background-color: #2E2E2E;
+            linear-gradient:
+        }
+        td.cte_course_block.selected {
+            background-color: #757575
+        }
+
+        body {
+            /* LAYOUT */
+            margin: 0;
+            padding: 0;
+            /* STYLE */
+            background-color: #404040;
+        }
+
+        td.cte_course_block a {
+            /* LAYOUT */
+            position: relative;
+            display: inline-block;
+            width: 75%;
+            height: 50%;
+            margin: 12.5%
+        }
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        div.course_info {
+            opacity: 0;
+        }
+
+        td.cte_course_block h3 {
+            /* LAYOUT */
+            /*
+            position: relative;
+            display: inline;
+            float: right;
+            background-color: #404040;
+            */
+            /* STYLE */
+            color: #7F2E4F;
+            visibility: visible;
+            font-family: Verdana;
+            margin: 10% 10% 0 10%;
+        }
+        td.cte_course_block p {
+            /* LAYOUT */
+            position: relative;
+            display: block;
+            visibility: visible;
+            /* STYLE */
+            color: #C9C9C9;
+            margin: 0 10% 10% 10%;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        td.cte_course_block.active_course {
+            border: 2px solid #757575;
+        }
+        td.cte_course_block h3.red, div.cte_course_block p.red {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+        <td class="cte_course_block">
+            <a href="www.google.com">
+                <img src="public/images/juanitacrest.png" />
+            </a>
+            <div class="course_info">
+                <h3>Course title</h3>
+                <p>Course description.</p>
+            </div>
+        </td>
+    </table>
+<!--
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Course title</h3>
+            <p>Course description.</p>
+        </div>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    <div class="cte_course_block">
+        <a href="www.google.com">
+            <img src="#" />
+        </a>
+        <h3>Course title</h3>
+        <p>Course description.</p>
+    </div>
+    -->
+</body>
+</html>
+
+<!-- nice pink color: #7F2854
+brighter: #7F2E4F
+dark grey: #2E2E2E
+med grey: #404040
+med light grey: #757575
+light grey: #C9C9C9
+
+
+-->

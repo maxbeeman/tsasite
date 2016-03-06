@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Titulo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <?php include_once("testCTEBlocks6.html"); ?>
+    <script>
+        $(document).ready(function() {
+
+            $("td.course_block").hover(function () {
+                var $info = $(this).find("p");
+                var $pic = $(this).children("a");
+                var $block = $(this).find(".course_info");
+                $block.delay(100).animate({
+                    top: '-26%'
+                }, 500);
+
+                $info.delay(100).animate({
+                    opacity: '1'
+                }, 400);
+
+                $pic.stop();
+                $pic.animate({
+                    width: '20%',
+                    height: '13%',
+                    margin: '10% 0% 0% 10%'
+                }, 400);
+                $(this).css("box-shadow", "0px 0px 10px black");
+
+
+            }, function() {
+                var $info = $(this).find("p");
+                var $pic = $(this).children("a");
+                var $block = $(this).find(".course_info");
+                $block.animate({
+                    top: '0%'
+                }, 350);
+
+                $info.animate({
+                    opacity: '0'
+                }, 300);
+                $pic.stop();
+                $pic.delay(150).animate({
+                    width: '75%',
+                    height: '50%',
+                    margin: '12.5% 12.5% 2% 12.5%'
+                }, 400);
+                $(this).css("box-shadow", "0px 0px 0px #370031");
+
+            });
+        });
+    </script>
+    <style>
+        td.course_block {
+            /* LAYOUT */
+            text-align: left;
+            width: 340px;
+            height: 300px;
+            display: inline-block;
+            margin: 3%;
+            position: relative;
+            /* STYLE */
+            background-color: #FFFFFF;
+        }
+
+        div.course_info {
+            /* LAYOUT */
+            position: relative;
+        }
+
+        body {
+            /* LAYOUT */
+            margin: 0;
+            padding: 0;
+            /* STYLE */
+            background-color: #002152;
+        }
+
+        td.course_block a {
+            /* LAYOUT */
+            position: relative;
+            display: inline-block;
+            border: 5px solid #FFFFFF;
+            width: 75%;
+            height: 50%;
+            margin: 12.5% 12.5% 2% 12.5%;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+        }
+
+        td.course_block h3 {
+            text-align: right;
+            opacity: 1;
+            position: relative;
+            float:right;
+            left: 5%;
+            width: 60%;
+            min-height: 3em;
+            visibility: visible;
+            margin: 5% 12% 5% 5%;
+        }
+        h3 {
+            color: #820300;
+            font-weight: bold;
+            font-family: Futura, Verdana, sans-serif;
+            font-size: 1.5em;
+        }
+        td.course_block p {
+            /* LAYOUT */
+            clear: both;
+            opacity: 0;
+            position: relative;
+            display: block;
+            visibility: visible;
+            margin: 50% 10% 10% 10%;
+        }
+        p {
+            color: #002152;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        /* HEADER AND FOOTER **********************************************/
+        h5 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        #main_title {
+            font-size: 2.5em;
+        }
+        table {
+            text-align: center;
+        }
+        .header {
+            text-align: center;
+            background-color: #820300;/* #820300; */
+            padding: 3%;
+            /*box-shadow: 0px 3px 2px #370031;*/
+        }
+        .footer {
+            text-align: left;
+            background-color: #820300;
+            padding: 3%;
+           /* box-shadow: 0px -3px 2px #370031;*/
+        }
+        .email:hover {
+            color: #FFEE9B;
+            text-decoration: underline;
+        }
+
+        /* MENU **********************************************/
+        .menu {
+            text-align: center;
+            background-color: #FFFFFF;
+            height: 47px;
+            width: 100%;
+            position: fixed;
+            min-width: 800px;
+            z-index: 1;
+        }
+        .menu_item {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0%;
+        }
+        .menu_item:hover {
+            background-color: #FFEE9B;
+        }
+        .menu_item:hover .page_list {
+            visibility: visible;
+        }
+        .menu_item:hover .page_list a {
+            visibility: visible;
+        }
+
+        h1 {
+            font-family: Futura, Verdana, sans-serif;
+            color: #002152;
+        }
+        .buffer {
+            display: inline-block;
+            width: 5%;
+            background-color: inherit;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0px;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        .page_list a {
+            text-decoration: none;
+            visibility: hidden;
+            display: block;
+            font-size: 0.5em;
+            color: #002152;
+            padding: 1%;
+        }
+        .page_list a:hover {
+            background-color: #FFEE9B;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="buffer"></div>
+    <h1 class="menu_item" id="cte">CTE Courses
+        <div class="page_list">
+            <a href="">Technology</a>
+            <a href="">Family and Consumer Sciences</a>
+            <a href="">Business and Marketing</a>
+        </div>
+    </h1>
+    <h1 class="menu_item" id="tsa">TSA Chapter
+        <div class="page_list">
+            <a href="">Motto & Creed</a>
+            <a href="">Activities</a>
+            <a href="">Officers</a>
+        </div></h1>
+    <h1 class="menu_item" id="drones">Solution -- Drones
+        <div class="page_list">
+            <a href="">Uses</a>
+            <a href="">Technology</a>
+            <a href="">Controversy</a>
+        </div></h1>
+    <div class="buffer"></div>
+
+</div>
+<div class="header">
+    <h2 id="main_title">Juanita High School Technology Courses</h2>
+    <h5>Hover over or tap the blocks for more information!</h5>
+</div>
+<table>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Applied Photography</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Architectural Drawing</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Biotech & Global Health</h3>
+            <p>Course description. For cool people. Who take courses.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Intro to Computer Science</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>AP Computer Science A</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Materials Science</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Mechanical Engineering</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Yearbook</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Theatre Lighting & Sound</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Theatre Costume & Scenic Design</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+    <td class="course_block">
+        <a href="www.google.com">
+            <img src="public/images/juanitacrest.png" />
+        </a>
+        <div class="course_info">
+            <h3>Production Workshop</h3>
+            <p>Course description.</p>
+        </div>
+    </td>
+</table>
+<div class="footer">
+    <h2>Contact</h2>
+    <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science)</h5>
+    <h5><span class="email">gshelton@lwsd.org</span> | 000-000-0000</h5>
+</div>
+</body>
+</html>
+
+<!--
+bright blue: #11E8FF
+green-blue: #45C4D1
+dark grey: #2E2E2E
+grey: #404040
+light grey: 757575
+very light grey: #C9C9C9
+
+
+
+nice pink color: #7F2854
+brighter: #7F2E4F
+dark grey: #2E2E2E
+med grey: #404040
+med light grey: #757575
+light grey: #C9C9C9
+
+
+tanzanite: #3B4B7F
+optimum blue: #455A80
+deeper blue: #00357F
+darker deep blue: #002152
+
+flirt alert: #BE3B38
+darker red: #8B2B29
+darker deep red: #580300
+next red: #571100
+yet another red: #690000
+red: #832232
+
+intoxication: #A1AC4E
+laser: #B5AF51
+
+off-white: #FDFFFC
+
+
+-->
+
