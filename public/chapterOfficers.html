@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>El Titulo</title>
+    <title>Officers | JHS TSA Chapter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <?php include_once("testCTEBlocks6.html"); ?>
     <script>
@@ -10,7 +10,7 @@
 
             $("td.course_block").hover(function () {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.delay(50).animate({
                     top: '-23%'
@@ -31,7 +31,7 @@
 
             }, function() {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.animate({
                     top: '0%'
@@ -77,7 +77,7 @@
             background-color: #002152;
         }
 
-        td.course_block a {
+        td.course_block .image_block {
             /* LAYOUT */
             position: relative;
             display: inline-block;
@@ -249,54 +249,54 @@
 </div>
 <table>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/president.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>President<br>Olivia Williams</h3>
             <p>Olivia has been president of Juanita TSA for three of her four high school years, and was vice president the fourth. She's been an avid member of TSA since 7th grade. A senior at JHS, Olivia plans to study scientific journalism in college.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/vicepresident.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Vice President<br>Maxine Beeman</h3>
             <p>Maxine has served in a myriad of leadership roles since joining TSA in 9th grade. A senior at JHS, Maxine hopes to study electrical engineering at MIT.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/secretary.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Secretary<br>David Brostek</h3>
             <p>David, a member of TSA since junior high, is excited to be a member of this year's leadership. A junior at JHS, he plans to study computer science.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/treasurer.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Treasurer<br>Diego Alvarez</h3>
             <p>Diego has previously served as JHS's Sergeant at Arms. A TSA member since 10th grade and a Juanita senior, he plans to study mechanical engineering and music composition.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/reporter.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Reporter<br>Fedor Pogulsky</h3>
             <p>A member of TSA since his sophomore year and a senior at Juanita, Fedor loves working toward each year's state competition. He's excited to be a member of this year's leadership and plans to study chemistry in college.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/sergeantatarms.jpg" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Sergeant at Arms<br>Nico Grataama</h3>
             <p>Nico, a member of TSA since junior high, can't wait to keep order at TSA meetings. A junior at JHS and an avid lover of video games, he plans to study computer science.</p>
