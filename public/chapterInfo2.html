@@ -7,6 +7,9 @@
     <?php include_once("testCTEBlocks6.html"); ?>
     <script>
         $(document).ready(function() {
+            $(".menu_item").click(function() {
+                $(this).toggleClass("selected");
+            });
             $(".main").click(function() {
                 $("div.box.first").animate({
                     opacity: "0"
@@ -97,15 +100,16 @@
             padding: 0 2%;
             margin: 0%;
         }
-        .menu_item:hover {
+        .menu_item:hover, .menu_item.selected {
             background-color: #FFEE9B;
         }
-        .menu_item:hover .page_list {
+        .menu_item:hover .page_list, .menu_item.selected .page_list {
             visibility: visible;
         }
-        .menu_item:hover .page_list a {
+        .menu_item:hover .page_list a, .menu_item.selected .page_list a {
             visibility: visible;
         }
+
 
         h1 {
             font-family: Futura, Verdana, sans-serif;
@@ -168,7 +172,7 @@
             position: relative;
             padding: 10px;
             height: auto;
-            width: 90%;
+            width: 80%;
             margin: 2% 5%;
             background-color: #ffffff;
         }
@@ -180,7 +184,7 @@
         }
         td {
             position: relative;
-            left: 20%;
+            left: 30%;
         }
 
 

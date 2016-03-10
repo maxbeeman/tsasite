@@ -13,22 +13,22 @@
                 } else {
                     $next = $("div.original");
                 }
+               /* $next.css("visibility", "visible");*/
 
                 $("div.box").animate({
-                    top: "-=390px"
+                    left: "+=30%"
                 }, "slow");
-                $("#first").animate({
+                $("#first")/*.delay("slow")*/.animate({
                     opacity: "0",
                     border: "0px 0px 0px #002152"
                 }, 0);
                 $("#first").animate({
-                    top: "+=3530px"
+                    left: "-=50%"
                 }, 0);
                 $("#first").animate({
                     opacity: "1"
                 }, 0);
                 $("#first").animate({
-                    top: "-=410"
                 }, "fast");
                 $("div#first").removeAttr('id', 'first');
                 $next.attr('id', 'first');
@@ -68,8 +68,9 @@
             position: relative;
             z-index: 2;
             text-align: center;
-            background-color: #820300;
+            background-color: #820300;/* #820300; */
             padding: 3%;
+            /*box-shadow: 0px 3px 2px #370031;*/
         }
         .footer {
             position: relative;
@@ -77,6 +78,7 @@
             text-align: left;
             background-color: #820300;
             padding: 3%;
+            /* box-shadow: 0px -3px 2px #370031;*/
         }
         .email:hover {
             color: #FFEE9B;
@@ -160,6 +162,8 @@
         }
 
         div.box {
+            display: inline-block;
+            /*visibility: hidden;*/
             min-width: 1000px;
             position: relative;
             padding: 10px;
@@ -177,6 +181,9 @@
             width: 30%;
             position: relative;
             margin: auto auto;
+        }
+        #first {
+            visibility: visible;
         }
 
 
@@ -308,24 +315,24 @@
     </div>
 
     <div class="box" id="movie">
-    <table>
-        <td>
-            <img src="public/images/">
-        </td>
-        <td>
-            <h3>Movie Night Fundraiser</h3>
-            <p id="movie_text">
-                Juanita TSA hosts movie night fundraisers featuring popular movies
-                such as Star Wars Episode IV: A New Hope and Guardians of the Galaxy.
-                Movie nights are held in the Juanita commons on a Friday evening
-                once a semester. Snacks and beverages are offered free to everyone
-                who attends, though donations are suggested! These donations to go
-                towards student scholarships to help members to attend the annual
-                state conference and towards covering the cost of meeting activity
-                and competition supplies.
-            </p>
-        </td>
-    </table>
+        <table>
+            <td>
+                <img src="public/images/">
+            </td>
+            <td>
+                <h3>Movie Night Fundraiser</h3>
+                <p id="movie_text">
+                    Juanita TSA hosts movie night fundraisers featuring popular movies
+                    such as Star Wars Episode IV: A New Hope and Guardians of the Galaxy.
+                    Movie nights are held in the Juanita commons on a Friday evening
+                    once a semester. Snacks and beverages are offered free to everyone
+                    who attends, though donations are suggested! These donations to go
+                    towards student scholarships to help members to attend the annual
+                    state conference and towards covering the cost of meeting activity
+                    and competition supplies.
+                </p>
+            </td>
+        </table>
     </div>
 
     <div class="box" id="ftc">
