@@ -8,24 +8,32 @@
     <script>
         $(document).ready(function() {
             $(".main").click(function() {
-                $("div.box.first").animate({
+                $("div.box").animate({
+                    top: "-=390px"
+                }, "slow");
+                $("#first").delay("slow").animate({
                     opacity: "0"
-                }, 20);
-                $("div.box.first").animate({
-                    top: "+=900px"
+                }, 0);
+                $("#first").animate({
+                    top: "+=1200px"
                 }, 60);
-                $("div.box.second").animate({
-                    top: "-=360px"
-                }, "slow");
-                $("div.box.first").animate({
+                $("#first").animate({
                     opacity: "1"
-                }, 60);
-                $("div.box.first").animate({
-                    top: "-=540px"
+                }, 0);
+                $("#first").animate({
+                    top: "-=420"
                 }, "slow");
-                $( "div.box" ).delay(100).toggleClass( "first");
-                $( "div.box" ).toggleClass( "second");
+                if($("div#first").next().is("div.box.not_first")) {
+                    $next = $("div#first").next("div.box");
+                } else {
+                    $next = $("div.original");
+                }
+                $("div#first").addClass("not_first");
+                $("div#first").removeAttr('id', 'first');
+                $next.removeClass("not_first");
+                $next.attr('id', 'first');
             });
+
             $("div.box").hover(function() {
                 $(this).css("box-shadow", "0 0 3px 5px #FFEE9B");
             }, function() {
@@ -34,7 +42,6 @@
         });
     </script>
     <style>
-
         body {
             /* LAYOUT */
             margin: 0;
@@ -136,7 +143,10 @@
             background-color: #FFEE9B;
         }
 
-    /*****************RELEVANT*********************************************************/
+        /*****************RELEVANT*********************************************************/
+        td {
+            margin-left: 10%;
+        }
         img {
             height: 100%;
             width: 100%;
@@ -153,34 +163,28 @@
             position: relative;
             color: #002152;
             font-family: Futura, Verdana, sans-serif;
-        }
-
-        p.creed_text {
-            left: 10%;
-            width: 80%;
-        }
-        h3.creed_text {
-            left: 10%;
+            max-width: 50%;
         }
 
         div.box {
             min-width: 1200px;
             position: relative;
             padding: 10px;
-            height: auto;
-            width: 90%;
-            margin: 2% 5%;
+            height: 350px;
+            width: 80%;
+            margin: 20px 5%;
             background-color: #ffffff;
         }
         img {
             position: relative;
-            left: 30%;
-            height: 300px;
-            width: 400px;
+            height: 10%;
+            width: 50%;
         }
         td {
             position: relative;
-            left: 20%;
+        }
+        #original {
+            background-color: red;
         }
 
 
@@ -217,37 +221,81 @@
 
 
 <div class="header">
-    <h2 id="main_title">Juanita High School Chapter Info</h2>
+    <h2 id="main_title">Drones: Concerns</h2>
     <h5>Click below to view the next information block!</h5>
 </div>
 
 
 <div class="main">
-    <div class="box motto first">
+    <div class="box original" id="first">
         <table>
             <td>
-                <h3>Motto</h3>
-                <p class="motto_text">
-                    Learning to Live in a Technical World
+                <h3>Safety</h3>
+                <p id="rocket_text">
+                    Current FAA regulations focus heavily on the safety of the drone itself.
+                    For all but recreational users, the drone must first be proved airworthy
+                    and then be granted an FAA certification or an airworthiness statement from
+                    the Department of Defense. <br> Although these are steps in the right direction,
+                    the hard truth is that UAV technology is racing ahead of the policy makers,
+                    making it almost impossible to impose updated safety regulations.<br> Despite
+                    heavy regulations, drones can still pose a great risk to public safety as they
+                    can operate in airspaces used by commercial and private aircraft. This concern
+                    is amplified by the fact that, at this time, UAVs are unable to recognize and
+                    avoid other aircraft. In June 2015, a hobby UAV was flying over a California
+                    wildfire and forced a firefighting plane to land, keeping the firefighters
+                    from performing their life-saving job.  According to the FAA, in 2015, 650
+                    airplane pilots reported seeing UAVs while flying. Worst case scenario, a plane
+                    full of passengers could crash to the ground because a small drone was flying
+                    where it wasn’t supposed to be. <br> On top of this, currently there are
+                    significant vulnerabilities in UAV operating systems, allowing for the all too
+                    real possibility of GPS-jamming, hacking, and cyber-terrorism.<br> By attaching
+                    firearms, drones could also become dangerous weapons. In May 2015, a video was
+                    published by Austin Haughwout that showed just that. This would remove criminals
+                    from the crime scene, even allowing them to pre program flight paths or target
+                    specific people once facial recognition software becomes ubiquitous, making the
+                    lives of law officials even more difficult.
+
                 </p>
             </td>
             <td>
-                <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+                <img src="public/images/drone_safety_edited.jpg">
             </td>
         </table>
     </div>
-    <div class="box creed second">
-        <h3 class="creed_text">Creed</h3>
-        <p class="creed_text">
-            I believe that Technology Education holds an important place in my life in the technical world.
-            <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
-            <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
-            <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
-            <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
-            <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
-        </p>
+
+    <div class="box not_first">
+        <table>
+            <td>
+                <img src="public/images/drone_privacy_edited.jpg">
+            </td>
+            <td>
+                <h3>Privacy</h3>
+                <p id="index_cards_text">
+                    Due to UAS technology’s capability of flying to heights beyond the range of
+                    sight of the average person, possible miniature size, maneuverability, and
+                    decreasing noise production, drones are able to survey places without notice.
+                    This creates significant privacy issues. In the wrong hands, drones could be
+                    used to gather extensive information and even blackmail, from credit card
+                    information to indecent photographs.<br> A particular concern has arisen due to
+                    government use of UAS technology. Multiple United States law enforcement
+                    offices have purchased UAVs, including Seattle, WA and Montgomery, TX. Citizens
+                    are worried they will violate individual’s privacy by looking into houses and
+                    tailing suspects. This would arguably be violating the 4th amendment of the
+                    constitution. Thankfully, motions have been made to prevent misuse of drones
+                    by police and other officials. The House of Representatives prohibited the use
+                    of evidence collected by drones without a warrant to be used in the court by
+                    amending the National Defense Authorization Act of 2013. We still have a long
+                    way to go, however, to complete security. <br> Drones could also be used by
+                    criminals to tail victims, steal information and belongings, and gather
+                    blackmail-worthy material. If you think drones are not technically capable of
+                    doing this, you are very wrong. Drones can be equipped with the very best
+                    imaging technology, providing the capability of obtaining very detailed
+                    photographs.
+                </p>
+            </td>
+        </table>
     </div>
-</div>
+
 
 
 

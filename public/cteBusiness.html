@@ -12,20 +12,20 @@
                 var $info = $(this).find("p");
                 var $pic = $(this).children("a");
                 var $block = $(this).find(".course_info");
-                $block.delay(100).animate({
-                    top: '-26%'
-                }, 500);
+                $block.delay(50).animate({
+                    top: '-23%'
+                }, 200);
 
-                $info.delay(100).animate({
+                $info.delay(50).animate({
                     opacity: '1'
-                }, 400);
+                }, 150);
 
                 $pic.stop();
                 $pic.animate({
                     width: '20%',
                     height: '13%',
                     margin: '10% 0% 0% 10%'
-                }, 400);
+                }, 200);
                 $(this).css("box-shadow", "0px 0px 10px black");
 
 
@@ -35,17 +35,17 @@
                 var $block = $(this).find(".course_info");
                 $block.animate({
                     top: '0%'
-                }, 350);
+                }, 150);
 
                 $info.animate({
                     opacity: '0'
-                }, 300);
+                }, 100);
                 $pic.stop();
-                $pic.delay(150).animate({
+                $pic.delay(50).animate({
                     width: '75%',
                     height: '50%',
-                    margin: '12.5% 12.5% 2% 12.5%'
-                }, 400);
+                    margin: '12.5% 12.5% 0% 11.5%'
+                }, 200);
                 $(this).css("box-shadow", "0px 0px 0px #370031");
 
             });
@@ -219,31 +219,30 @@
 
     </style>
 </head>
-<body>
 <div class="menu">
     <div class="buffer"></div>
     <h1 class="menu_item" id="cte">CTE Courses
         <div class="page_list">
-            <a href="">Technology</a>
-            <a href="">Family and Consumer Sciences</a>
-            <a href="">Business and Marketing</a>
+            <a href="cteTechnology.html">Technology</a>
+            <a href="cteFamily.html">Family and Consumer Sciences</a>
+            <a href="cteBusiness.html">Business and Marketing</a>
         </div>
     </h1>
     <h1 class="menu_item" id="tsa">TSA Chapter
         <div class="page_list">
-            <a href="">Motto & Creed</a>
-            <a href="">Activities</a>
-            <a href="">Officers</a>
+            <a href="chapterInfo2.html">Motto & Creed</a>
+            <a href="chapterActivities.html">Activities</a>
+            <a href="chapterOfficers.html">Officers</a>
         </div></h1>
     <h1 class="menu_item" id="drones">Solution -- Drones
         <div class="page_list">
-            <a href="">Uses</a>
-            <a href="">Technology</a>
-            <a href="">Controversy</a>
+            <a href="testDrones2.html">Uses</a>
+            <a href="testDronesTech.html">Technology</a>
+            <a href="testDronesUsesFinal.html">Controversy</a>
         </div></h1>
     <div class="buffer"></div>
-
 </div>
+
 <div class="header">
     <h2 id="main_title">Juanita High School Business and Marketing Courses</h2>
     <h5>Hover over or tap the blocks for more information!</h5>

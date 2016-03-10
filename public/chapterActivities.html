@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>El Titulo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <?php include_once("testCTEBlocks6.html"); ?>
+    <script>
+        $(document).ready(function() {
+            $(".main").click(function() {
+                $("div.box").animate({
+                    top: "-=390px"
+                }, "slow");
+                $("#first")/*.delay("slow")*/.animate({
+                    opacity: "0",
+                    border: "0px 0px 0px #002152"
+                }, 0);
+                $("#first").animate({
+                    top: "+=3530px"
+                }, 0);
+                $("#first").animate({
+                    opacity: "1"
+                }, 0);
+                $("#first").animate({
+                    top: "-=410"
+                }, "fast");
+                if($("div#first").next().is("div.box")) {
+                    $next = $("div#first").next("div.box");
+                } else {
+                    $next = $("div.original");
+                }
+                $("div#first").removeAttr('id', 'first');
+                $next.attr('id', 'first');
+            });
+
+            $("div.box").hover(function() {
+                $(this).css("box-shadow", "0 0 3px 5px #FFEE9B");
+            }, function() {
+                $(this).css("box-shadow", "0 0 0px 0px #002152");
+            });
+        });
+    </script>
+    <style>
+        body {
+            /* LAYOUT */
+            margin: 0;
+            padding: 0;
+            /* STYLE */
+            background-color: #002152;
+        }
+        /* HEADER AND FOOTER **********************************************/
+        h5 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        #main_title {
+            font-size: 2.5em;
+        }
+        table {
+            text-align: center;
+        }
+        .header {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            background-color: #820300;/* #820300; */
+            padding: 3%;
+            /*box-shadow: 0px 3px 2px #370031;*/
+        }
+        .footer {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            background-color: #820300;
+            padding: 3%;
+            /* box-shadow: 0px -3px 2px #370031;*/
+        }
+        .email:hover {
+            color: #FFEE9B;
+            text-decoration: underline;
+        }
+
+        /* MENU **********************************************/
+        .menu {
+            text-align: center;
+            background-color: #FFFFFF;
+            height: 47px;
+            width: 100%;
+            position: fixed;
+            z-index: 3;
+            min-width: 800px;
+        }
+        .menu_item {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            height: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0%;
+        }
+        .menu_item:hover {
+            background-color: #FFEE9B;
+        }
+        .menu_item:hover .page_list {
+            visibility: visible;
+        }
+        .menu_item:hover .page_list a {
+            visibility: visible;
+        }
+
+        h1 {
+            font-family: Futura, Verdana, sans-serif;
+            color: #002152;
+        }
+        .buffer {
+            display: inline-block;
+            width: 5%;
+            background-color: inherit;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0px;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: #FFFFFF;
+        }
+        .page_list a {
+            text-decoration: none;
+            visibility: hidden;
+            display: block;
+            font-size: 0.5em;
+            color: #002152;
+            padding: 1%;
+        }
+        .page_list a:hover {
+            background-color: #FFEE9B;
+        }
+
+        /*****************RELEVANT*********************************************************/
+
+        h3 {
+            margin: auto;
+            position: relative;
+            color: #820300;
+            font-weight: bold;
+            font-family: Futura, Verdana, sans-serif;
+            font-size: 1.5em;
+        }
+        p {
+            margin: auto;
+            position: relative;
+            color: #002152;
+            font-family: Futura, Verdana, sans-serif;
+            max-width: 80%;
+        }
+
+        div.box {
+            min-width: 1000px;
+            position: relative;
+            padding: 10px;
+            height: 350px;
+            width: 70%;
+            margin: 20px auto;
+            background-color: #ffffff;
+        }
+        img {
+            position: relative;
+            height: 330px;
+            margin: auto;
+        }
+        td {
+            width: 30%;
+            position: relative;
+            margin: auto auto;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="menu">
+    <div class="buffer"></div>
+    <h1 class="menu_item" id="cte">CTE Courses
+        <div class="page_list">
+            <a href="cteTechnology.html">Technology</a>
+            <a href="cteFamily.html">Family and Consumer Sciences</a>
+            <a href="cteBusiness.html">Business and Marketing</a>
+        </div>
+    </h1>
+    <h1 class="menu_item" id="tsa">TSA Chapter
+        <div class="page_list">
+            <a href="chapterInfo2.html">Motto & Creed</a>
+            <a href="chapterActivities.html">Activities</a>
+            <a href="chapterOfficers.html">Officers</a>
+        </div></h1>
+    <h1 class="menu_item" id="drones">Solution -- Drones
+        <div class="page_list">
+            <a href="testDrones2.html">Uses</a>
+            <a href="testDronesTech.html">Technology</a>
+            <a href="testDronesUsesFinal.html">Controversy</a>
+        </div></h1>
+    <div class="buffer"></div>
+</div>
+
+
+
+
+
+<div class="header">
+    <h2 id="main_title">Juanita High School Chapter Info</h2>
+    <h5>Click below to scroll up the next information block!</h5>
+</div>
+
+
+<div class="main">
+    <div class="box original" id="first">
+        <table>
+            <td>
+                <h3>Club Activity: Paper Rockets</h3>
+                <p id="rocket_text">
+                    One of this year's favorite club activities was
+                    the paper rocket competition, inspired by an
+                    exhibit at the 2015 Seattle Maker Fair! New and
+                    returning TSA members joined club advisor Mr. Shelton
+                    in September to design, construct, and launch paper
+                    rockets in the Juanita parking lot.
+                </p>
+            </td>
+            <td>
+                <img src="public/images/TSA_PaperRockets1.jpg">
+            </td>
+        </table>
+    </div>
+
+    <div class="box">
+        <table>
+            <td>
+                <img src="public/images/TSA_Beams.jpg">
+            </td>
+            <td>
+                <h3>Club Activity: Problem Solving</h3>
+                <p id="index_cards_text">
+                    TSA members explored the applications of geometry
+                    this year by folding large index cards into beams
+                    capable of supporting up to 15 lbs! Students competed
+                    to find the strongest and simplest beam design and
+                    practice their problem solving skills.
+                </p>
+            </td>
+        </table>
+    </div>
+
+    <div class="box" id="regionals">
+        <table>
+            <td>
+                <h3>Regional Conference</h3>
+                <p id="regionals_text">
+                    Juanita students practice their problem solving and
+                    structural design skills in Finn Hill Middle School's
+                    annual regional conference, as well as encourage middle
+                    school students to continue as members of TSA through high school.
+                </p>
+            </td>
+            <td>
+                <img src="public/images/TSA_Regionals.jpg">
+            </td>
+        </table>
+    </div>
+
+    <div class="box" id="projects">
+        <table>
+            <td>
+                <img src="public/images/TSA_Fashion_Fave.jpg">
+            </td>
+            <td>
+                <h3>Club Activity: Yearlong Projects</h3>
+                <p id="projects_text">
+                    TSA students spend most of the school year until April working
+                    on projects for the annual state conference. Students design and
+                    create items for a myriad of different competitions, including
+                    video game design, desktop publishing, biotechnology design, and fashion design.
+                </p>
+            </td>
+        </table>
+    </div>
+
+    <div class="box" id="state">
+        <table>
+            <td>
+                <h3>State Conference</h3>
+                <p id="state_text">
+                    Juanita TSA students spend a busy and fun-filled March weekend every
+                    year at Washington's annual TSA state conference. Each year, students
+                    compete in conference competitions including prepared and extemporaneous
+                    speech and photographic technology.
+                </p>
+            </td>
+            <td>
+                <img src="public/images/TSA_Max.jpg">
+            </td>
+        </table>
+    </div>
+
+    <div class="box" id="movie">
+    <table>
+        <td>
+            <img src="public/images/">
+        </td>
+        <td>
+            <h3>Movie Night Fundraiser</h3>
+            <p id="movie_text">
+                Juanita TSA hosts movie night fundraisers featuring popular movies
+                such as Star Wars Episode IV: A New Hope and Guardians of the Galaxy.
+                Movie nights are held in the Juanita commons on a Friday evening
+                once a semester. Snacks and beverages are offered free to everyone
+                who attends, though donations are suggested! These donations to go
+                towards student scholarships to help members to attend the annual
+                state conference and towards covering the cost of meeting activity
+                and competition supplies.
+            </p>
+        </td>
+    </table>
+    </div>
+
+    <div class="box" id="ftc">
+        <table>
+            <td>
+                <h3>FTC Robotics Demonstration</h3>
+                <p id="ftc_text">
+                    TSA invited a local FIRST Technology Challenge team to demonstrate
+                    their robot and give advice to Juanita's budding VEX robotics team.
+                    Both the FTC team and a former LWHS VEX robotics coach offered handy
+                    tips to Juanita's VEX team.
+                </p>
+            </td>
+            <td>
+                <img src="public/images/TSA_FTC_DIEGO.jpg">
+            </td>
+        </table>
+    </div>
+
+    <div class="box" id="tutor">
+        <table>
+            <td>
+                <img src="public/images/TSA_Elizabeth.jpg">
+            </td>
+            <td>
+                <h3>Technology Tutoring</h3>
+                <p id="tutor_text">
+                    TSA students offer to tutor Juanita's AP Computer Science students
+                    after school during our Thursday club meetings.
+                </p>
+            </td>
+        </table>
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="footer">
+    <h2>Contact</h2>
+    <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science) | <span class="email">gshelton@lwsd.org</span></h5>
+    <h5>Genevieve Menino (Foods, Child Development, Interior Design) | <span class="email">gmenino@lwsd.org</span></h5>
+    <h5>Peter Bottman (Foods, Psychology) | <span class="email">pbottman@lwsd.org</span></h5>
+
+</div>
+</body>
+</html>
