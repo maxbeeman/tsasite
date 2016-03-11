@@ -156,24 +156,42 @@
             text-decoration: underline;
         }
 
-        /* MENU **********************************************/
+        /************** MENU **********************************************/
         .menu {
             text-align: center;
-            background-color: #FFFFFF;
-            height: 47px;
+            background-color: white;
+            height: 40px;
             width: 100%;
             position: fixed;
-            min-width: 800px;
-            z-index: 1;
+            z-index: 5;
+            min-width: 1000px;
         }
         .menu_item {
             position: relative;
             display: inline-block;
-            text-align: center;
             height: 100%;
             width: auto;
             padding: 0 2%;
             margin: 0%;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0%;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: white;
+        }
+        h1 a, .page_list a {
+            text-decoration: none;
+            font-family: Futura, Verdana, sans-serif;
+            text-align: center;
+            font-size: 0.5em;
+            color: #002152;
+        }
+        .page_list a {
+            display: block;
+            padding: 1%;
         }
         .menu_item:hover {
             background-color: #FFEE9B;
@@ -181,68 +199,61 @@
         .menu_item:hover .page_list {
             visibility: visible;
         }
-        .menu_item:hover .page_list a {
-            visibility: visible;
-        }
-
-        h1 {
-            font-family: Futura, Verdana, sans-serif;
-            color: #002152;
-        }
-        .buffer {
-            display: inline-block;
-            width: 5%;
-            background-color: inherit;
-        }
-        .page_list {
-            visibility: hidden;
-            left: 0px;
-            top: 100%;
-            position: absolute;
-            width: 100%;
-            background-color: #FFFFFF;
-        }
-        .page_list a {
-            text-decoration: none;
-            visibility: hidden;
-            display: block;
-            font-size: 0.5em;
-            color: #002152;
-            padding: 1%;
+        .buffer:hover {
+            background-color: white;
         }
         .page_list a:hover {
             background-color: #FFEE9B;
         }
+        /************** END OF MENU **********************************************/
 
 
     </style>
 </head>
 <body>
-<div class="menu">
-    <div class="buffer"></div>
-    <h1 class="menu_item" id="cte">CTE Courses
-        <div class="page_list">
-            <a href="cteTechnology.html">Technology</a>
-            <a href="cteFamily.html">Family and Consumer Sciences</a>
-            <a href="cteBusiness.html">Business and Marketing</a>
-        </div>
-    </h1>
-    <h1 class="menu_item" id="tsa">TSA Chapter
-        <div class="page_list">
-            <a href="chapterInfo2.html">Motto & Creed</a>
-            <a href="chapterActivities.html">Activities</a>
-            <a href="chapterOfficers.html">Officers</a>
-        </div></h1>
-    <h1 class="menu_item" id="drones">Solution -- Drones
-        <div class="page_list">
-            <a href="testDrones2.html">Uses</a>
-            <a href="testDronesTech.html">Technology</a>
-            <a href="testDronesUsesFinal.html">Controversy</a>
-            <a href ="droneFuture.html">Future</a>
-        </div></h1>
-    <div class="buffer"></div>
-</div>
-
+    <!-------------MENU------------------------------------>
+    <div class="menu">
+        <h1 class="menu_item" id="home">
+            <a href="index.html">Home</a>
+            <div class="page_list">
+                <a href="citations.html">Citations</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="cte">
+            <a href="cte_home.html">CTE Courses</a>
+            <div class="page_list">
+                <a href="cteTechnology.html">Technology</a>
+                <a href="cteFamily.html">Family and Consumer Sciences</a>
+                <a href="cteBusiness.html">Business and Marketing</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="tsa">
+            <a href="tsa_home.html">TSA Chapter</a>
+            <div class="page_list">
+                <a href="chapterInfo2.html">Motto & Creed</a>
+                <a href="Old/chapterActivities.html">Activities</a>
+                <a href="chapterOfficers.html">Officers</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="drones">
+            <a href="testDronesHome1.html">Solution -- Drones</a>
+            <div class="page_list">
+                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesTech.html">Technology</a>
+                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href ="droneFuture.html">Future</a>
+            </div></h1>
+    </div>
+    <!-------------END-MENU------------------------------------>
 <div class="header">
     <h2 id="main_title">Juanita High School Technology Courses</h2>
     <h5>Hover over or tap the blocks for more information!</h5>

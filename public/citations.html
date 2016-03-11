@@ -2,9 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Citations | JHS TSA 2016</title>
+    <style>
+        body {
+            background-color: #002152;
+            padding: 0px;
+            margin: 0px;
+        }
+        /************** MENU **********************************************/
+        .menu {
+            text-align: center;
+            background-color: white;
+            height: 40px;
+            width: 100%;
+            position: fixed;
+            z-index: 5;
+            min-width: 1000px;
+        }
+        .menu_item {
+            position: relative;
+            display: inline-block;
+            height: 100%;
+            width: auto;
+            padding: 0 2%;
+            margin: 0%;
+        }
+        .page_list {
+            visibility: hidden;
+            left: 0%;
+            top: 100%;
+            position: absolute;
+            width: 100%;
+            background-color: white;
+        }
+        h1 a, .page_list a {
+            text-decoration: none;
+            font-family: Futura, Verdana, sans-serif;
+            text-align: center;
+            font-size: 0.5em;
+            color: #002152;
+        }
+        .page_list a {
+            display: block;
+            padding: 1%;
+        }
+        .menu_item:hover {
+            background-color: #FFEE9B;
+        }
+        .menu_item:hover .page_list {
+            visibility: visible;
+        }
+        .buffer:hover {
+            background-color: white;
+        }
+        .page_list a:hover {
+            background-color: #FFEE9B;
+        }
+        /************** END OF MENU **********************************************/
+    </style>
 </head>
 <body>
-
+<!-------------MENU------------------------------------>
+    <div class="menu">
+        <h1 class="menu_item" id="home">
+            <a href="index.html">Home</a>
+            <div class="page_list">
+                <a href="citations.html">Citations</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="cte">
+            <a href="cte_home.html">CTE Courses</a>
+            <div class="page_list">
+                <a href="cteTechnology.html">Technology</a>
+                <a href="cteFamily.html">Family and Consumer Sciences</a>
+                <a href="cteBusiness.html">Business and Marketing</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="tsa">
+            <a href="tsa_home.html">TSA Chapter</a>
+            <div class="page_list">
+                <a href="chapterInfo2.html">Motto & Creed</a>
+                <a href="Old/chapterActivities.html">Activities</a>
+                <a href="chapterOfficers.html">Officers</a>
+            </div>
+        </h1>
+        <h1 class="menu_item buffer">
+            <a>|</a>
+        </h1>
+        <h1 class="menu_item" id="drones">
+            <a href="testDronesHome1.html">Solution -- Drones</a>
+            <div class="page_list">
+                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesTech.html">Technology</a>
+                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href ="droneFuture.html">Future</a>
+            </div></h1>
+    </div>
+<!-------------END-MENU------------------------------------>
 </body>
 </html>
