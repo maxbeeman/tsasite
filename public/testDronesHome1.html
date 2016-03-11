@@ -64,7 +64,7 @@
         /* MENU **********************************************/
         .menu {
             text-align: center;
-            background-color: #002152;
+            background-color: white;
             height: 47px;
             width: 100%;
             position: fixed;
@@ -75,11 +75,19 @@
             position: relative;
             display: inline-block;
             text-align: center;
-            background-color: #ffffff;
             height: 100%;
             width: auto;
             padding: 0 2%;
             margin: 0%;
+        }
+        h1 {
+            font-family: Futura, Verdana, sans-serif;
+            color: #002152;
+            font-size: 1.5em;
+        }
+        .menu_item a {
+            text-decoration: none;
+            color: #002152;
         }
         .menu_item:hover {
             background-color: #FFEE9B;
@@ -90,17 +98,11 @@
         .menu_item:hover .page_list a {
             visibility: visible;
         }
-
-        h1 {
-            font-family: Futura, Verdana, sans-serif;
-            color: #002152;
-            font-size: 1.5em;
-        }
         .buffer {
-            display: inline-block;
-            width: 5%;
+            width: 1%;
+        }
+        .buffer:hover {
             background-color: white;
-            margin: 0;
         }
         .page_list {
             visibility: hidden;
@@ -121,10 +123,7 @@
         .page_list a:hover {
             background-color: #FFEE9B;
         }
-        .menu_item a {
-            text-decoration: none;
-            color: #002152;
-        }
+
 
         /********* RELEVANT ***********************************************/
         table {
@@ -231,6 +230,9 @@
             <a href="citations.html">Citations</a>
         </div>
     </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
     <h1 class="menu_item" id="cte">
         <a href="cte_home.html">CTE Courses</a>
         <div class="page_list">
@@ -239,13 +241,20 @@
             <a href="cteBusiness.html">Business and Marketing</a>
         </div>
     </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
     <h1 class="menu_item" id="tsa">
         <a href="tsa_home.html">TSA Chapter</a>
         <div class="page_list">
             <a href="chapterInfo2.html">Motto & Creed</a>
             <a href="chapterActivities.html">Activities</a>
             <a href="chapterOfficers.html">Officers</a>
-        </div></h1>
+        </div>
+    </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
     <h1 class="menu_item" id="drones">
         <a href="testDronesHome1.html">Solution -- Drones</a>
         <div class="page_list">
