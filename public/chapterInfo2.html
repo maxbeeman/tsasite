@@ -11,25 +11,25 @@
                 $(this).toggleClass("selected");
             });
             $(".main").click(function() {
-                $("div.box.first").animate({
+                $("td.box.first").animate({
                     opacity: "0"
                 }, 20);
-                $("div.box.first").animate({
+                $("td.box.first").animate({
                     top: "+=900px"
                 }, 60);
-                $("div.box.second").animate({
-                    top: "-=360px"
+                $("td.box.second").animate({
+                    top: "-=390px"
                 }, "slow");
-                $("div.box.first").animate({
+                $("td.box.first").animate({
                     opacity: "1"
                 }, 60);
-                $("div.box.first").animate({
-                    top: "-=540px"
+                $("td.box.first").animate({
+                    top: "-=510px"
                 }, "slow");
-                $( "div.box" ).delay(100).toggleClass( "first");
-                $( "div.box" ).toggleClass( "second");
+                $( "td.box" ).delay(100).toggleClass( "first");
+                $( "td.box" ).toggleClass( "second");
             });
-            $("div.box").hover(function() {
+            $("td.box").hover(function() {
                 $(this).css("box-shadow", "0 0 3px 5px #FFEE9B");
             }, function() {
                 $(this).css("box-shadow", "0 0 0px 0px #002152");
@@ -133,6 +133,9 @@
         /************** END OF MENU **********************************************/
 
     /*****************RELEVANT*********************************************************/
+        table {
+            text-align: center;
+        }
         img {
             height: 100%;
             width: 100%;
@@ -159,13 +162,14 @@
             left: 10%;
         }
 
-        div.box {
+        td.box {
             min-width: 1200px;
             position: relative;
+            display: inline-block;
             padding: 10px;
-            height: auto;
+            height: 350px;
             width: 80%;
-            margin: 2% 5%;
+            margin: 10px 10px;
             background-color: #ffffff;
         }
         img {
@@ -174,7 +178,7 @@
             height: 300px;
             width: 400px;
         }
-        td {
+        td.box td {
             position: relative;
             left: 30%;
         }
@@ -239,7 +243,51 @@
 
 
 <div class="main">
-    <div class="box motto first">
+    <table>
+        <td class="box motto first">
+            <table>
+                <td>
+                    <h3>Motto</h3>
+                    <p class="motto_text">
+                        Learning to Live in a Technical World
+                    </p>
+                </td>
+                <td>
+                    <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+                </td>
+            </table>
+        </td>
+        <td class="box creed second">
+            <h3 class="creed_text">Creed</h3>
+            <p class="creed_text">
+                I believe that Technology Education holds an important place in my life in the technical world.
+                <br>I believe there is a need for the development of good attitudes concerning work, tools, materials, experimentation, and processes of industry.
+                <br>Guided by my teachers, artisans from industry, and my own initiative, I will strive to do my best in making my school, community, state, and nation better places in which to live.
+                <br>I will accept the responsibilities that are mine. I will accept the theories that are supported by proper evidence. I will explore on my own for safer, more effective methods of working and living.
+                <br>I will strive to develop a cooperative attitude and will exercise tact and respect for other individuals. Through the work of my hands and mind, I will express my ideas to the best of my ability.
+                <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
+            </p>
+        </td>
+    </table>
+</div>
+
+
+
+
+
+
+<div class="footer">
+    <h2>Contact</h2>
+    <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science) | <span class="email">gshelton@lwsd.org</span></h5>
+    <h5>Genevieve Menino (Foods, Child Development, Interior Design) | <span class="email">gmenino@lwsd.org</span></h5>
+    <h5>Peter Bottman (Foods, Psychology) | <span class="email">pbottman@lwsd.org</span></h5>
+
+</div>
+</body>
+</html>
+
+<!----
+<div class="box motto first">
         <table>
             <td>
                 <h3>Motto</h3>
@@ -263,19 +311,4 @@
             <br>I will make it my goal to do better each day the task before me, and to be steadfast in my belief in my God, and my fellow Americans.
         </p>
     </div>
-</div>
-
-
-
-
-
-
-<div class="footer">
-    <h2>Contact</h2>
-    <h5>Greg Shelton (Architecture, Engineering, Materials Science, Computer Science) | <span class="email">gshelton@lwsd.org</span></h5>
-    <h5>Genevieve Menino (Foods, Child Development, Interior Design) | <span class="email">gmenino@lwsd.org</span></h5>
-    <h5>Peter Bottman (Foods, Psychology) | <span class="email">pbottman@lwsd.org</span></h5>
-
-</div>
-</body>
-</html>
+    -->
