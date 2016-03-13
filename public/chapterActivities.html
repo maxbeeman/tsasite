@@ -52,7 +52,7 @@
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -61,27 +61,35 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
             position: relative;
-            z-index: 2;
             text-align: center;
             background-color: #820300;
-            padding: 3%;
+            min-width: 1200px;
+            height: 180px;
+            z-index: 1;
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
+            padding: 2%;
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -179,57 +187,58 @@
 <!-------------MENU------------------------------------>
 <div class="menu">
     <h1 class="menu_item" id="home">
-        <a href="../index.html">Home</a>
+        <a href="index.html">Home</a>
         <div class="page_list">
-            <a href="../citations.html">Citations</a>
+            <a href="citations.html">Citations</a>
         </div>
     </h1>
     <h1 class="menu_item buffer">
         <a>|</a>
     </h1>
     <h1 class="menu_item" id="cte">
-        <a href="../cte_home.html">CTE Courses</a>
+        <a href="cte_home.html">CTE Courses</a>
         <div class="page_list">
-            <a href="../cteTechnology.html">Technology</a>
-            <a href="../cteFamily.html">Family and Consumer Sciences</a>
-            <a href="../cteBusiness.html">Business and Marketing</a>
+            <a href="cteTechnology.html">Technology</a>
+            <a href="cteFamily.html">Family and Consumer Sciences</a>
+            <a href="cteBusiness.html">Business and Marketing</a>
         </div>
     </h1>
     <h1 class="menu_item buffer">
         <a>|</a>
     </h1>
     <h1 class="menu_item" id="tsa">
-        <a href="../tsa_home.html">TSA Chapter</a>
+        <a href="tsa_home.html">TSA Chapter</a>
         <div class="page_list">
-            <a href="../chapterInfo2.html">Motto & Creed</a>
-            <a href="../chapterActivities.html">Activities</a>
-            <a href="../chapterOfficers.html">Officers</a>
+            <a href="chapterInfo2.html">Motto & Creed</a>
+            <a href="chapterActivities.html">Activities</a>
+            <a href="chapterOfficers.html">Officers</a>
         </div>
     </h1>
     <h1 class="menu_item buffer">
         <a>|</a>
     </h1>
     <h1 class="menu_item" id="drones">
-        <a href="../testDronesHome1.html">Solution -- Drones</a>
+        <a href="testDronesHome1.html">Solution -- Drones</a>
         <div class="page_list">
-            <a href="../testDrones2.html">Uses</a>
-            <a href="../testDronesTech.html">Technology</a>
-            <a href="../testDronesUsesFinal.html">Controversy</a>
-            <a href ="../droneFuture.html">Future</a>
+            <a href="testDronesUsesFinal.html">Uses</a>
+            <a href="testDronesTech.html">Technology</a>
+            <a href="testDronesConcernsFinal.html">Controversy</a>
+            <a href ="droneFuture.html">Future</a>
         </div></h1>
 </div>
 <!-------------END-MENU------------------------------------>
-
-
-
-
-
+<!-------------HEADER-------------------------------------->
 <div class="header">
-    <h2 id="main_title">Juanita High School Chapter Info</h2>
-    <h5>Click below to scroll up the next information block!</h5>
+    <div class="header_text">
+        <h2 id="main_title">Juanita High School Chapter Info</h2>
+        <h5>Juanita High School TSA | Webmaster 2016
+            <br>Click below to scroll up the next information block!</h5>
+    </div>
+    <div class="header_image">
+        <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+    </div>
 </div>
-
-
+<!-------------END-HEADER-------------------------------------->
 <div class="main">
     <div class="box original" id="first">
         <table>

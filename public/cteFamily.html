@@ -7,10 +7,9 @@
     <?php include_once("testCTEBlocks6.html"); ?>
     <script>
         $(document).ready(function() {
-
             $("td.course_block").hover(function () {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.delay(50).animate({
                     top: '-23%'
@@ -31,7 +30,7 @@
 
             }, function() {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.animate({
                     top: '0%'
@@ -47,11 +46,11 @@
                     margin: '12.5% 12.5% 0% 11.5%'
                 }, 200);
                 $(this).css("box-shadow", "0px 0px 0px #370031");
-
             });
         });
     </script>
     <style>
+        /* ANIMATED BLOCKS **********************************************/
         td.course_block {
             /* LAYOUT */
             text-align: left;
@@ -77,11 +76,10 @@
             background-color: #002152;
         }
 
-        td.course_block a {
+        td.course_block .image_block {
             /* LAYOUT */
             position: relative;
             display: inline-block;
-            border: 5px solid #FFFFFF;
             width: 75%;
             height: 50%;
             margin: 12.5% 12.5% 2% 12.5%;
@@ -101,7 +99,7 @@
             width: 60%;
             min-height: 3em;
             visibility: visible;
-            margin: 5% 12% 1% 5%;
+            margin: 5% 12% 0% 5%;
         }
         h3 {
             color: #820300;
@@ -116,16 +114,21 @@
             position: relative;
             display: block;
             visibility: visible;
-            margin: 10%;
+            margin: 50% 10% 10% 10%;
+            z-index: initial;
         }
         p {
             color: #002152;
             font-family: Futura, Verdana, sans-serif;
         }
+        table {
+            text-align: center;
+        }
+        /* END ANIMATED BLOCKS **********************************************/
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -134,27 +137,34 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
+            position: relative;
             text-align: center;
-            background-color: #820300;/* #820300; */
-            padding: 3%;
-            /*box-shadow: 0px 3px 2px #370031;*/
+            background-color: #820300;
+            min-width: 1200px;
+            height: 180px;
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
-            /* box-shadow: 0px -3px 2px #370031;*/
+            padding: 2%;
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -247,106 +257,114 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
     <!-------------END-MENU------------------------------------>
-<div class="header">
-    <h2 id="main_title">Juanita High School Family and Consumer Sciences Courses</h2>
-    <h5>Hover over or tap the blocks for more information!</h5>
-</div>
+    <!-------------HEADER-------------------------------------->
+    <div class="header">
+        <div class="header_text">
+            <h2 id="main_title">JHS Family and Consumer Sciences Courses</h2>
+            <h5>Juanita High School TSA | Webmaster 2016
+                <br>Hover over or tap the blocks for more information!</h5>
+        </div>
+        <div class="header_image">
+            <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+        </div>
+    </div>
+    <!-------------END-HEADER---------------------------------->
 <table>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Life and Finances</h3>
-            <p>Course description.</p>
+            <p>Students develop knowledge and experience with money management by studying how to create a budget, checkbook use and reconciliation, credit cards, loans, planning for retirement, investing, automobile purchasing and ownership, apartment living, consumerism, employability, job hunting, résumés, job interviews, and financial math.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Interior Design</h3>
-            <p>Course description.</p>
+            <p>Interior design students learn and apply the basics of design to housing and home interiors. Students study color, lighting, furniture arrangement and furniture styles, kitchen and bath planning, floor coverings, fabrics, housing styles, window treatments, accessories, and space planning. At the end of the course, students complete designs for the interior of a home.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Child Development</h3>
-            <p>Course description.</p>
+            <p>Students study the physical, emotional, social and intellectual development of children from conception (pre-birth) through age 6 – the most dramatic growing period in human life. This class develops skills needed by parents, professional childcare providers, educators, and Outdoor Education Counselors through experience with children's activities and at local elementary schools.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Child Development 2</h3>
-            <p>Course description. For cool people. Who take courses.</p>
+            <p>Students in this course are assigned an intern position at offsite preschools or elementary schools, where they can apply skills and knowledge gained through the Child Development I course. Students observe learning behaviors in children and assist classroom teachers in planning and implementing appropriate activities.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Psychology</h3>
-            <p>Course description.</p>
+            <p>Students explore the nature of human behavior from a social science point of view. Students address concepts such as consciousness, intelligence and memory, behavior modification, personal and moral development, theories of personality, psychological disorders, and social interaction. The course emphasizes self-exploration, understanding, and strategies for coping with stress and change.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>AP Psychology</h3>
-            <p>Course description.</p>
+            <p>This course provides students with the analytical skills and factual knowledge necessary to better understand the nature of human behavior. Students are introduced to the systematic and scientific study of behavior and mental processes of human beings and other animals in addition to the major subfields of psychology, from ethics to intelligence to psychological disorders.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Foods</h3>
-            <p>Course description.</p>
+            <p>Students create foods from bread and pies, to shish kebabs and fruit smoothies. They explore a variety of cooking techniques and develop an understanding of how food choices and the way food is prepared contributes to their total wellness. The skills students learn can lead to employment in food service at a restaurant, on a cruise ship, at a golf course, or in a corporate setting.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Gourmet Foods</h3>
-            <p>Course description.</p>
+            <p>Students learn to prepare gourmet entrees and a variety of international dishes. Food items may include seasonal and holiday dishes, handmade chocolates, sushi, Chicken Cordon Bleu, cream puffs, mango salmon, chocolate trifle, and vegetarian dishes. Product quality, presentation, the role of ingredients, sanitation, and teamwork are emphasized.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>International Foods</h3>
-            <p>Course description.</p>
+            <p>Students prepare a variety of international dishes and learn about the ethnic traditions of theses countries. Classes virtually travel to Italy, France, Greece, Germany, Scandinavia, Mexico, Japan, China and other countries to sample the traditional foods of these regions. Menu items include manicotti, enchiladas, baklava, hand-made pasta, and many other dishes.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Food Science</h3>
-            <p>Course description.</p>
+            <p>Ever wonder why bread rises, how mayonnaise is made, or how marshmallows are formed? This course focuses on the application of biological, chemical, and physical principles as they relate to the study of food and food production. Students learn how professionals work to make foods safe, nutritious, convenient, economical, and tasty.</p>
         </div>
     </td>
 </table>

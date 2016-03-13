@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Business and Marketing | JHS CTE Courses</title>
+    <title>Officers | JHS TSA Chapter</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <?php include_once("testCTEBlocks6.html"); ?>
     <script>
         $(document).ready(function() {
+
             $("td.course_block").hover(function () {
                 var $info = $(this).find("p");
                 var $pic = $(this).children(".image_block");
@@ -26,6 +27,8 @@
                     margin: '10% 0% 0% 10%'
                 }, 200);
                 $(this).css("box-shadow", "0px 0px 10px black");
+
+
             }, function() {
                 var $info = $(this).find("p");
                 var $pic = $(this).children(".image_block");
@@ -44,16 +47,16 @@
                     margin: '12.5% 12.5% 0% 11.5%'
                 }, 200);
                 $(this).css("box-shadow", "0px 0px 0px #370031");
+
             });
         });
     </script>
     <style>
-        /* ANIMATED BLOCKS **********************************************/
         td.course_block {
             /* LAYOUT */
             text-align: left;
-            width: 360px;
-            height: 340px;
+            width: 350px;
+            height: 300px;
             display: inline-block;
             margin: 3%;
             position: relative;
@@ -78,6 +81,7 @@
             /* LAYOUT */
             position: relative;
             display: inline-block;
+            border: 5px solid #FFFFFF;
             width: 75%;
             height: 50%;
             margin: 12.5% 12.5% 2% 12.5%;
@@ -119,15 +123,10 @@
             color: #002152;
             font-family: Futura, Verdana, sans-serif;
         }
-        table {
-            text-align: center;
-        }
-        /* END ANIMATED BLOCKS **********************************************/
-
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Verdana, sans-serif;
+            font-family: Futura, Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -136,34 +135,27 @@
         #main_title {
             font-size: 2.5em;
         }
-        .header {
-            position: relative;
+        table {
             text-align: center;
-            background-color: #820300;
-            min-width: 1200px;
-            height: 180px;
+        }
+        .header {
+            text-align: center;
+            background-color: #820300;/* #820300; */
+            padding: 3%;
+            /*box-shadow: 0px 3px 2px #370031;*/
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 2%;
+            padding: 3%;
+            /* box-shadow: 0px -3px 2px #370031;*/
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
-        .header_text, .header_image {
-            margin: 0% 1%;
-            display: inline-block;
-        }
-        .header_image img {
-            width: 160px;
-            height: 100px;
-            margin-top: 60px;
-        }
-        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -219,114 +211,107 @@
 
     </style>
 </head>
-    <!-------------MENU------------------------------------>
-    <div class="menu">
-        <h1 class="menu_item" id="home">
-            <a href="index.html">Home</a>
-            <div class="page_list">
-                <a href="citations.html">Citations</a>
-            </div>
-        </h1>
-        <h1 class="menu_item buffer">
-            <a>|</a>
-        </h1>
-        <h1 class="menu_item" id="cte">
-            <a href="cte_home.html">CTE Courses</a>
-            <div class="page_list">
-                <a href="cteTechnology.html">Technology</a>
-                <a href="cteFamily.html">Family and Consumer Sciences</a>
-                <a href="cteBusiness.html">Business and Marketing</a>
-            </div>
-        </h1>
-        <h1 class="menu_item buffer">
-            <a>|</a>
-        </h1>
-        <h1 class="menu_item" id="tsa">
-            <a href="tsa_home.html">TSA Chapter</a>
-            <div class="page_list">
-                <a href="chapterInfo2.html">Motto & Creed</a>
-                <a href="chapterActivities.html">Activities</a>
-                <a href="chapterOfficers.html">Officers</a>
-            </div>
-        </h1>
-        <h1 class="menu_item buffer">
-            <a>|</a>
-        </h1>
-        <h1 class="menu_item" id="drones">
-            <a href="testDronesHome1.html">Solution -- Drones</a>
-            <div class="page_list">
-                <a href="testDronesUsesFinal.html">Uses</a>
-                <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesConcernsFinal.html">Controversy</a>
-                <a href ="droneFuture.html">Future</a>
-            </div></h1>
-    </div>
-    <!-------------END-MENU------------------------------------>
-    <!-------------HEADER-------------------------------------->
-    <div class="header">
-        <div class="header_text">
-            <h2 id="main_title">JHS Business and Marketing Courses</h2>
-            <h5>Juanita High School TSA | Webmaster 2016
-                <br>Hover over or tap the blocks for more information!</h5>
+<body>
+<!-------------MENU------------------------------------>
+<div class="menu">
+    <h1 class="menu_item" id="home">
+        <a href="index.html">Home</a>
+        <div class="page_list">
+            <a href="citations.html">Citations</a>
         </div>
-        <div class="header_image">
-            <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+    </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
+    <h1 class="menu_item" id="cte">
+        <a href="cte_home.html">CTE Courses</a>
+        <div class="page_list">
+            <a href="cteTechnology.html">Technology</a>
+            <a href="cteFamily.html">Family and Consumer Sciences</a>
+            <a href="cteBusiness.html">Business and Marketing</a>
         </div>
-    </div>
-    <!-------------END-HEADER---------------------------------->
+    </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
+    <h1 class="menu_item" id="tsa">
+        <a href="tsa_home.html">TSA Chapter</a>
+        <div class="page_list">
+            <a href="chapterInfo2.html">Motto & Creed</a>
+            <a href="chapterActivities.html">Activities</a>
+            <a href="chapterOfficers.html">Officers</a>
+        </div>
+    </h1>
+    <h1 class="menu_item buffer">
+        <a>|</a>
+    </h1>
+    <h1 class="menu_item" id="drones">
+        <a href="testDronesHome1.html">Solution -- Drones</a>
+        <div class="page_list">
+            <a href="testDronesUsesFinal.html">Uses</a>
+            <a href="testDronesTech.html">Technology</a>
+            <a href="testDronesConcernsFinal.html">Controversy</a>
+            <a href ="droneFuture.html">Future</a>
+        </div></h1>
+</div>
+<!-------------END-MENU------------------------------------>
+<div class="header">
+    <h2 id="main_title">Juanita High School Chapter Officers</h2>
+    <h5>Hover over or tap the officer's blocks for more information!</h5>
+</div>
 <table>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/president.jpg" />
         </div>
         <div class="course_info">
-            <h3>Introduction to Marketing</h3>
-            <p>In this course, students learn the functions of marketing and the infrastructure of the business world. Students receive an overview of core business concepts, including business environment, ethical practices, business ownership, management, communication and principles of economics. This practical course also teaches students to be able to sell the most important product: themselves. </p>
+            <h3>Mr. Greg Shelton</h3>
+            <p>Olivia has been president of Juanita TSA for three of her four high school years, and was vice president the fourth. She's been an avid member of TSA since 7th grade. A senior at JHS, Olivia plans to study scientific journalism in college.</p>
         </div>
     </td>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/vicepresident.jpg" />
         </div>
         <div class="course_info">
-            <h3>Digital Design I</h3>
-            <p>Explore the world of digital based communications! Digital Design focuses on the foundations of graphic design and digital communications of the 21st Century. Students explore communication mediums of a digital society using applications such as Adobe Web Premium, Photoshop, and Illustrator, to create projects such as online website development, blogs, social media and wikis.</p>
+            <h3>Vice President<br>Maxine Beeman</h3>
+            <p>Maxine has served in a myriad of leadership roles since joining TSA in 9th grade. A senior at JHS, Maxine hopes to study electrical engineering at MIT.</p>
         </div>
     </td>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/secretary.jpg" />
         </div>
         <div class="course_info">
-            <h3>Marketing 2</h3>
-            <p>Students in this course learn marketing concepts, skills and the underlying foundations of business. Students demonstrate an understanding of sales and marketing concepts, challenge themselves academically, and develop leadership skills and practical business experience through DECA conferences and competition. Students prepare for regional and state DECA competition in class.</p>
+            <h3>Secretary<br>David Brostek</h3>
+            <p>David, a member of TSA since junior high, is excited to be a member of this year's leadership. A junior at JHS, he plans to study computer science.</p>
         </div>
     </td>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/treasurer.jpg" />
         </div>
         <div class="course_info">
-            <h3>Microsoft IT Academy</h3>
-            <p>This course prepares students for the Microsoft Office Suite Certification Exams (MOS) in Word, Excel, PowerPoint and Access (optional). A MOS certification helps validate an individual’s skill in using Microsoft Office and meets the industry demand for the most up to date skills on the latest Microsoft technologies.</p>
+            <h3>Treasurer<br>Diego Alvarez</h3>
+            <p>Diego has previously served as JHS's Sergeant at Arms. A TSA member since 10th grade and a Juanita senior, he plans to study mechanical engineering and music composition.</p>
         </div>
     </td>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/reporter.jpg" />
         </div>
         <div class="course_info">
-            <h3>Marketing Operations</h3>
-            <p>Student Store students run an authentic retail business. Learning activities include: Cashiering, Food Service, Management, Product Reps, Window Display, Customer Research, Physical Inventory, and Profit & Loss Statements. The Student Store gives marketing students a chance to prove their entrepreneurial skills by producing a profit for their student leadership club DECA.</p>
+            <h3>Reporter<br>Fedor Pogulsky</h3>
+            <p>A member of TSA since his sophomore year and a senior at Juanita, Fedor loves working toward each year's state competition. He's excited to be a member of this year's leadership and plans to study chemistry in college.</p>
         </div>
     </td>
     <td class="course_block">
         <div class="image_block">
-            <img src="public/images/juanitacrest.png" />
+            <img src="public/images/sergeantatarms.jpg" />
         </div>
         <div class="course_info">
-            <h3>Career Work Experience</h3>
-            <p>Students who are taking or have taken an occupational course are eligible to register for credit for work experience. Students must be employed in an approved, supervised job. Students must complete a minimum of 180 hours of work for each .50 credit awarded. In addition, students must sign a training agreement and participate in a formal evaluation process to earn credit.</p>
+            <h3>Sergeant at Arms<br>Nico Grataama</h3>
+            <p>Nico, a member of TSA since junior high, can't wait to keep order at TSA meetings. A junior at JHS and an avid lover of video games, he plans to study computer science.</p>
         </div>
     </td>
 </table>

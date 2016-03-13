@@ -9,6 +9,46 @@
             padding: 0px;
             margin: 0px;
         }
+        /* HEADER AND FOOTER **********************************************/
+        h5 {
+            color: #FFFFFF;
+            font-family: Verdana, sans-serif;
+        }
+        h2 {
+            color: #FFFFFF;
+            font-family: Futura, Verdana, sans-serif;
+        }
+        #main_title {
+            font-size: 2.5em;
+        }
+        .header {
+            position: relative;
+            text-align: center;
+            background-color: #820300;
+            min-width: 1200px;
+            height: 180px;
+        }
+        .footer {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+            background-color: #820300;
+            padding: 2%;
+        }
+        .email:hover {
+            color: #FFEE9B;
+            text-decoration: underline;
+        }
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
         /************** MENU **********************************************/
         .menu {
             text-align: center;
@@ -59,6 +99,32 @@
             background-color: #FFEE9B;
         }
         /************** END OF MENU **********************************************/
+        h3{
+            color:#FFFFFF;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 2em;
+        }
+        h4{
+            color:#FFFFFF;
+            text-align: left;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 1em;
+            text-indent: 20%;
+
+        }
+        p{
+            color:#FFFFFF;
+            text-align: left;
+            text-decoration: none;
+            text-indent:30px;
+            font-size: 1em;
+        }
+        .citations{
+            min-width: 300px;
+        }
     </style>
 </head>
 <body>
@@ -98,12 +164,33 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
 <!-------------END-MENU------------------------------------>
 </body>
+
+<div class="header">
+    <div class="header_text">
+        <h2 id="main_title">Citations</h2>
+        <h5>Juanita High School TSA | Webmaster 2016</h5>
+    </div>
+    <div class="header_image">
+        <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+    </div>
+</div>
+<div class = "citations">
+    <h3>Images Works Cited</h3>
+        <h4>2005. pixabay. Web. 6 Mar. 2016. < https://pixabay.com/en/mother-board-electronics-computer-581597/>.</h4>
+        <h4> 2012. pixabay. Web. 5 Mar. 2016. < https://pixabay.com/en/bus-accident-fire-fire-department-72213/>.</h4>
+        <h4>2012. pixabay. Web. 5 Mar. 2016. < https://pixabay.com/en/competition-award-trophy-champion-238261/>.</h4>
+        <h4>2013. pixabay. Web. 5 Mar. 2016. < https://pixabay.com/en/university-lecture-campus-education-105709/>.</h4>
+        <h4> 2013. pixabay. Web. 6 Mar. 2016. < https://pixabay.com/en/aircraft-boeing-sun-solar-ortho-464296/>.</h4>
+        <h4> 2013. pixabay. Web. 6 Mar. 2016. < https://pixabay.com/en/air-monitoring-hexacopter-quadcopter-211124/>.</h4>
+        <h4>2013. pixabay. Web. 6 Mar. 2016. < https://pixabay.com/en/hexacopter-helicopter-model-camera-113478/>.</h4>
+</div>
+
 </html>

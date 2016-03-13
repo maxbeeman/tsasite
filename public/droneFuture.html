@@ -26,7 +26,7 @@
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -35,15 +35,12 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
             position: relative;
-            z-index: 2;
             text-align: center;
             background-color: #820300;/* #820300; */
-            padding: 3%;
+            min-width: 800px;
+            height: 180px;
             /*box-shadow: 0px 3px 2px #370031;*/
         }
         .footer {
@@ -51,13 +48,24 @@
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
+            padding: 2%;
             /* box-shadow: 0px -3px 2px #370031;*/
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 5%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+            /*margin-top: 40px;*/
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -136,7 +144,7 @@
         }
 
         div.box {
-            min-width: 1100px;
+            min-width: 900px;
             position: relative;
             padding: 10px;
             height: 520px;
@@ -209,21 +217,27 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
     <!-------------END-MENU------------------------------------>
 
 
-
-
-<div class="header">
-    <h2 id="main_title">Drones: th Future</h2>
-    <h5>Read the text below for more information!</h5>
-</div>
+    <!-------------HEADER-------------------------------------->
+    <div class="header">
+        <div class="header_text">
+            <h2 id="main_title">Drones: The Future</h2>
+            <h5>Juanita High School TSA | Webmaster 2016
+            <br>Read the text below for more information!</h5>
+        </div>
+        <div class="header_image">
+            <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+        </div>
+    </div>
+    <!-------------END-HEADER---------------------------------->
 
 
 <div class="main">

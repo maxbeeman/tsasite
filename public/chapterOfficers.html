@@ -52,6 +52,9 @@
         });
     </script>
     <style>
+        table {
+            text-align: center;
+        }
         td.course_block {
             /* LAYOUT */
             text-align: left;
@@ -81,7 +84,6 @@
             /* LAYOUT */
             position: relative;
             display: inline-block;
-            border: 5px solid #FFFFFF;
             width: 75%;
             height: 50%;
             margin: 12.5% 12.5% 2% 12.5%;
@@ -126,7 +128,7 @@
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -135,27 +137,34 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
+            position: relative;
             text-align: center;
-            background-color: #820300;/* #820300; */
-            padding: 3%;
-            /*box-shadow: 0px 3px 2px #370031;*/
+            background-color: #820300;
+            min-width: 1200px;
+            height: 180px;
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
-            /* box-shadow: 0px -3px 2px #370031;*/
+            padding: 2%;
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -248,17 +257,25 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
 <!-------------END-MENU------------------------------------>
+<!-------------HEADER-------------------------------------->
 <div class="header">
-    <h2 id="main_title">Juanita High School Chapter Officers</h2>
-    <h5>Hover over or tap the officer's blocks for more information!</h5>
+    <div class="header_text">
+        <h2 id="main_title">Juanita High School Chapter Officers</h2>
+        <h5>Juanita High School TSA | Webmaster 2016
+        <br>Hover over or tap the officer's blocks for more information!</h5>
+    </div>
+    <div class="header_image">
+        <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+    </div>
 </div>
+<!-------------END-HEADER-------------------------------------->
 <table>
     <td class="course_block">
         <div class="image_block">

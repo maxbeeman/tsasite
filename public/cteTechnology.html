@@ -10,7 +10,7 @@
 
             $("td.course_block").hover(function () {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.delay(50).animate({
                     top: '-23%'
@@ -31,7 +31,7 @@
 
             }, function() {
                 var $info = $(this).find("p");
-                var $pic = $(this).children("a");
+                var $pic = $(this).children(".image_block");
                 var $block = $(this).find(".course_info");
                 $block.animate({
                     top: '0%'
@@ -52,6 +52,7 @@
         });
     </script>
     <style>
+        /* ANIMATED BLOCKS **********************************************/
         td.course_block {
             /* LAYOUT */
             text-align: left;
@@ -77,11 +78,10 @@
             background-color: #002152;
         }
 
-        td.course_block a {
+        td.course_block .image_block {
             /* LAYOUT */
             position: relative;
             display: inline-block;
-            border: 5px solid #FFFFFF;
             width: 75%;
             height: 50%;
             margin: 12.5% 12.5% 2% 12.5%;
@@ -101,7 +101,7 @@
             width: 60%;
             min-height: 3em;
             visibility: visible;
-            margin: 5% 12% 1% 5%;
+            margin: 5% 12% 0% 5%;
         }
         h3 {
             color: #820300;
@@ -116,16 +116,22 @@
             position: relative;
             display: block;
             visibility: visible;
-            margin: 10%;
+            margin: 50% 10% 10% 10%;
+            z-index: initial;
         }
         p {
             color: #002152;
             font-family: Futura, Verdana, sans-serif;
         }
+        table {
+            text-align: center;
+        }
+        /* END ANIMATED BLOCKS **********************************************/
+
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -134,13 +140,12 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
+            position: relative;
             text-align: center;
             background-color: #820300;/* #820300; */
-            padding: 3%;
+            min-width: 1200px;
+            height: 180px;
             /*box-shadow: 0px 3px 2px #370031;*/
         }
         .footer {
@@ -148,13 +153,24 @@
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
+            padding: 2%;
             /* box-shadow: 0px -3px 2px #370031;*/
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 5%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+            /*margin-top: 40px;*/
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -247,115 +263,133 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
     <!-------------END-MENU------------------------------------>
-<div class="header">
-    <h2 id="main_title">Juanita High School Technology Courses</h2>
-    <h5>Hover over or tap the blocks for more information!</h5>
-</div>
+    <!-------------HEADER-------------------------------------->
+    <div class="header">
+        <div class="header_text">
+            <h2 id="main_title">JHS Technology Courses</h2>
+            <h5>Juanita High School TSA | Webmaster 2016
+                <br>Hover over or tap the blocks for more information!</h5>
+        </div>
+        <div class="header_image">
+            <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+        </div>
+    </div>
+    <!-------------END-HEADER---------------------------------->
 <table>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
+        <div class="course_info">
+            <h3>Applied Photography</h3>
+            <p>This is an advanced level photography class for students who wish to review and refine the skills introduced in Photography 1. Manual shooting mode, traditional and creative studio lighting techniques, and other new photographic techniques are explored through projects to build an exemplary portfolio. Students study and apply the influence of professional photographers to their own work.</p>
+        </div>
+    </td>
+
+    <td class="course_block">
+        <div class="image_block">
+            <img src="public/images/juanitacrest.png" />
+        </div>
         <div class="course_info">
             <h3>Applied Photography</h3>
             <p>This is an advanced level photography class for students who wish to review and refine the skills introduced in Photography 1. Manual shooting mode, traditional and creative studio lighting techniques, and other new photographic techniques are explored through projects to build an exemplary portfolio. Students study and apply the influence of professional photographers to their own work.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Architectural Drawing</h3>
-            <p>Course description.</p>
+            <p>Students learn drawing skills, room design, rendering, model building, building codes and structural design, spending substantial time learning to use computer animated design software (CAD). Advanced level students, planning on a career in a related field, learn more about energy-efficient construction, cost estimation, and codes. Students work to build an exemplary portfolio.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Biotech & Global Health</h3>
-            <p>Course description. For cool people. Who take courses.</p>
+            <p>Students explore headlining global health topics, including cloning, stem cell research, ethics, and personalized medicine, with an emphasis on hands-on laboratory training in the techniques used in global health, biotechnology and genetic engineering today. Students are also given the opportunity to explore career options in the biotechnology field.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Intro to Computer Science</h3>
-            <p>Course description.</p>
+            <p>Students delve into the leading field of computer science by creating their own games and programming a robot. Students study the History and Applications of CS, Computational Thinking, Boolean Logic, Recursion, Input/Output (I/O), Algorithms and Data Structures, Human-Computer Interaction, Computer Engineering, Programming Languages, and Problem abstraction.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>AP Computer Science A</h3>
-            <p>Course description.</p>
+            <p>In this course, students design and implement solutions to computer science problems by writing, running, and debugging computer programs using the programming language Java. The course emphasizes object-oriented programming methodology with a concentration on problem solving and algorithm development. Dedicated Microsoft TEALS volunteers tutor students daily.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Materials Science</h3>
-            <p>Course description.</p>
+            <p>Over the course of this class, students learn about metals, ceramics, polymers (plastics), and composites through careful observations, creating, questioning, and building. This engineering course involves welding, casting metals into molds, working glass, cutting polymers, and much more. This class is great for students who love hands on classes and lab science.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Mechanical Engineering</h3>
-            <p>Course description.</p>
+            <p>Approximately 50% of students' in-class time is spent developing skills using CAD systems such as AutoCAD, Rhinoceros, sketchup, and other software that introduces students to engineering graphics. CAD/CAM software, laser cutters, 3D printers are used to develop and transfer ideas into 3D parts, models, and projects. Students create a portfolio presented according to professional standards.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Yearbook</h3>
-            <p>Course description.</p>
+            <p>This class is a production based class involving photography, graphic design, writing, marketing and research. Its highly motivated and creative students create exemplary yearbooks to be loved by students and alumni for years and enjoy the satisfaction of seeing their work in print.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Theatre Lighting & Sound</h3>
-            <p>Course description.</p>
+            <p>Students learn the skills and techniques of theatrical lighting and sound design through hands-on coursework. The curriculum addresses all aspects of the design and functional use of stage lights and sound in the Theatre space, including the newest technology: intelligent lighting and moving lights. Students work on lighting and sound in connection with Juanita drama productions.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Theatre Costume & Scenic Design</h3>
-            <p>Course description.</p>
+            <p>Theatre Costume/Scenic Design is a hands-on theatre course that teaches the skills and techniques of costume and set design. Students of all experience levels learn how to budget, design, plan and build costume and set pieces, and have the opportunity to work on costumes and sets in connection with Juanita drama productions.</p>
         </div>
     </td>
     <td class="course_block">
-        <a href="www.google.com">
+        <div class="image_block">
             <img src="public/images/juanitacrest.png" />
-        </a>
+        </div>
         <div class="course_info">
             <h3>Production Workshop</h3>
-            <p>Course description.</p>
+            <p>Students in Production Workshop support the drama productions, club meetings, festivals, and other theatre activities. Students also audition for and participate in the year's productions, which involves some extended after-school time for rehearsals.</p>
         </div>
     </td>
 </table>

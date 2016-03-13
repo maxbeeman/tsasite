@@ -20,8 +20,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".delivery").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -35,8 +33,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".internet").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -50,8 +46,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".news").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -65,8 +59,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".photography").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -80,8 +72,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".agriculture").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -94,8 +84,6 @@
                 $("h3.agriculture_title").toggleClass("visible");
             });
 
-        });
-        $(document).ready(function() {
 
             $(".hollywood").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -109,8 +97,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".hurricane").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -124,8 +110,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".threeD_mapping").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -139,8 +123,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".monitoring").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -154,8 +136,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".math").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -169,8 +149,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".history").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -184,8 +162,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".la").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -199,8 +175,6 @@
 
             });
 
-        });
-        $(document).ready(function() {
 
             $(".pe").click(function() {
                 $('li.use').removeAttr('id', 'selected');
@@ -215,15 +189,13 @@
             });
 
         });
-
-
     </script>
     <style>
 
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -232,27 +204,34 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
+            position: relative;
             text-align: center;
-            background-color: #820300;/* #820300; */
-            padding: 3%;
-            /*box-shadow: 0px 3px 2px #370031;*/
+            background-color: #820300;
+            min-width: 1200px;
+            height: 180px;
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
-            /* box-shadow: 0px -3px 2px #370031;*/
+            padding: 2%;
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
 
         /************** MENU **********************************************/
         .menu {
@@ -353,6 +332,7 @@
         .use:hover{
             background-color: #FFEE9B;
         }
+
 
         div.display{
             height: 10%;
@@ -469,18 +449,26 @@
         <h1 class="menu_item" id="drones">
             <a href="testDronesHome1.html">Solution -- Drones</a>
             <div class="page_list">
-                <a href="testDrones2.html">Uses</a>
+                <a href="testDronesUsesFinal.html">Uses</a>
                 <a href="testDronesTech.html">Technology</a>
-                <a href="testDronesUsesFinal.html">Controversy</a>
+                <a href="testDronesConcernsFinal.html">Controversy</a>
                 <a href ="droneFuture.html">Future</a>
             </div></h1>
     </div>
     <!-------------END-MENU------------------------------------>
-<div class="header">
-    <h2 id="main_title">The Uses of Drones</h2>
-    <h5>Scroll down and click the blocks to explore the uses of drones!</h5>
 
-</div>
+    <!-------------HEADER-------------------------------------->
+    <div class="header">
+        <div class="header_text">
+            <h2 id="main_title">The Uses of Drones</h2>
+            <h5>Juanita High School TSA | Webmaster 2016
+            <br>Scroll down and click the blocks to explore the uses of drones!</h5>
+        </div>
+        <div class="header_image">
+            <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+        </div>
+    </div>
+    <!-------------END-HEADER---------------------------------->
 <div class="main">
     <div class = "info_block">
         <div class = "title">
@@ -620,7 +608,7 @@
         <ul class="use_titles">
             <div class = "full_position">
                 <ul class = "use_titles">
-                    <li class = "starter page">Overview</li>
+                    <li class = "use starter page" id="selected">Overview</li>
                     <li class="use commercial delivery">Delivery</li>
                     <li class="use commercial internet">Internet Service</li>
                     <li class="use commercial news">News</li>
