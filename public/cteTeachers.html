@@ -10,42 +10,42 @@
 
             $("td.course_block").hover(function () {
                 var $info = $(this).find("p");
-                var $pic = $(this).children(".image_block");
-                var $block = $(this).find(".course_info");
-                $block.delay(50).animate({
-                    top: '-23%'
+                var $contact = $(this).find("h6");
+                var $title = $(this).children("h3");
+                $title.animate({
+                    fontSize: "1em"
                 }, 200);
 
                 $info.delay(50).animate({
-                    opacity: '1'
+                    fontSize: "1.15em",
+                    marginRight: "2%"
                 }, 150);
-
-                $pic.stop();
-                $pic.animate({
-                    width: '20%',
-                    height: '13%',
-                    margin: '10% 0% 0% 10%'
-                }, 200);
-                $(this).css("box-shadow", "0px 0px 10px black");
+                $contact.delay(50).animate({
+                    fontSize: "1.15em",
+                    marginRight: "2%"
+                }, 150);
+                $(this).css("box-shadow", "0px 0px 10px #FFEE9B");
 
 
             }, function() {
                 var $info = $(this).find("p");
-                var $pic = $(this).children(".image_block");
+                var $contact = $(this).find("h6");
+                var $title = $(this).children("h3");
                 var $block = $(this).find(".course_info");
-                $block.animate({
-                    top: '0%'
-                }, 150);
-
-                $info.animate({
-                    opacity: '0'
-                }, 100);
-                $pic.stop();
-                $pic.delay(50).animate({
-                    width: '75%',
-                    height: '50%',
-                    margin: '12.5% 12.5% 0% 11.5%'
+                $title.animate({
+                    fontSize: "2.5em"
                 }, 200);
+
+                $info.delay(50).animate({
+                    fontSize: "1em",
+                    marginLeft: "5%",
+                    marginRight: "15%"
+                }, 150);
+                $contact.delay(50).animate({
+                    fontSize: "1em",
+                    marginLeft: "5%",
+                    marginRight: "15%"
+                }, 150);
                 $(this).css("box-shadow", "0px 0px 0px #370031");
 
             });
@@ -53,80 +53,64 @@
     </script>
     <style>
         td.course_block {
-            /* LAYOUT */
             text-align: left;
             width: 350px;
-            height: 20em;
+            height: 19em;
             display: inline-block;
             margin: 3%;
             position: relative;
-            /* STYLE */
             background-color: #FFFFFF;
         }
 
         div.course_info {
-            /* LAYOUT */
             position: relative;
         }
 
         body {
-            /* LAYOUT */
             margin: 0;
             padding: 0;
-            /* STYLE */
             background-color: #002152;
         }
 
-        td.course_block .image_block {
-            /* LAYOUT */
-            position: relative;
-            display: inline-block;
-            border: 5px solid #FFFFFF;
-            width: 75%;
-            height: 50%;
-            margin: 12.5% 12.5% 2% 12.5%;
-        }
-
-        img {
-            height: 100%;
-            width: 100%;
-        }
-
         td.course_block h3 {
-            text-align: right;
-            opacity: 1;
+            text-align: left;
             position: relative;
-            float:right;
-            left: 5%;
-            width: 60%;
-            min-height: 3em;
+            float:left;
             visibility: visible;
-            margin: 5% 12% 0% 5%;
+            margin: 5%;
         }
         h3 {
             color: #820300;
             font-weight: bold;
             font-family: Futura, Verdana, sans-serif;
-            font-size: 1.5em;
+            font-size: 2.5em;
+        }
+        h6 {
+            color: #820300;
+            font-size: 1em;
+            font-family: Futura, Verdana, sans-serif;
+            margin: 0% 15% 10% 5%;
         }
         td.course_block p {
             /* LAYOUT */
             clear: both;
-            opacity: 0;
             position: relative;
             display: block;
             visibility: visible;
-            margin: 50% 10% 10% 10%;
+            margin: 10% 15% 10% 5%;
             z-index: initial;
         }
         p {
             color: #002152;
             font-family: Futura, Verdana, sans-serif;
         }
+        table {
+            text-align: center;
+        }
         /* HEADER AND FOOTER **********************************************/
         h5 {
             color: #FFFFFF;
-            font-family: Futura, Verdana, sans-serif;
+            font-family: Verdana, sans-serif;
         }
         h2 {
             color: #FFFFFF;
@@ -135,28 +119,34 @@
         #main_title {
             font-size: 2.5em;
         }
-        table {
-            text-align: center;
-        }
         .header {
+            position: relative;
             text-align: center;
-            background-color: #820300;/* #820300; */
-            padding: 3%;
-            /*box-shadow: 0px 3px 2px #370031;*/
+            background-color: #820300;
+            min-width: 1200px;
+            height: 180px;
         }
         .footer {
             position: relative;
             z-index: 2;
             text-align: left;
             background-color: #820300;
-            padding: 3%;
-            /* box-shadow: 0px -3px 2px #370031;*/
+            padding: 2%;
         }
         .email:hover {
             color: #FFEE9B;
             text-decoration: underline;
         }
-
+        .header_text, .header_image {
+            margin: 0% 1%;
+            display: inline-block;
+        }
+        .header_image img {
+            width: 160px;
+            height: 100px;
+            margin-top: 60px;
+        }
+        /* END HEADER AND FOOTER **********************************************/
         /************** MENU **********************************************/
         .menu {
             text-align: center;
@@ -229,6 +219,7 @@
             <a href="cteTechnology.html">Technology</a>
             <a href="cteFamily.html">Family and Consumer Sciences</a>
             <a href="cteBusiness.html">Business and Marketing</a>
+            <a href="cteTeachers.html">CTE Instructors</a>
         </div>
     </h1>
     <h1 class="menu_item buffer">
@@ -255,63 +246,66 @@
         </div></h1>
 </div>
 <!-------------END-MENU------------------------------------>
+<!-------------HEADER-------------------------------------->
 <div class="header">
-    <h2 id="main_title">Juanita High School Chapter Officers</h2>
-    <h5>Hover over or tap the officer's blocks for more information!</h5>
+    <div class="header_text">
+        <h2 id="main_title">JHS CTE Instructors</h2>
+        <h5>Juanita High School TSA | Webmaster 2016
+            <br>Hover over or tap the instructors' blocks for more information!</h5>
+    </div>
+    <div class="header_image">
+        <img src="public/images/TSA-Technology-Student-Association-Emblem.png">
+    </div>
 </div>
+<!-------------END-HEADER---------------------------------->
 <table>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/president.jpg" />
-        </div>
+        <h3>Mr. Shelton</h3>
         <div class="course_info">
-            <h3>Mr. Greg Shelton</h3>
-            <p>Olivia has been president of Juanita TSA for three of her four high school years, and was vice president the fourth. She's been an avid member of TSA since 7th grade. A senior at JHS, Olivia plans to study scientific journalism in college.</p>
+            <p>Greg Shelton teaches Woodshop, Material Science, Computer Science, Architecture, and Mechanical Engineering at Juanita High School. He is also a club advisor for Juanita's TSA chapter.</p>
+            <h6>Contact: 425 936-1600 ext. 61622 | gshelton@lwsd.org</h6>
         </div>
     </td>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/vicepresident.jpg" />
-        </div>
+        <h3>Ms. Menino</h3>
         <div class="course_info">
-            <h3>Vice President<br>Maxine Beeman</h3>
-            <p>Maxine has served in a myriad of leadership roles since joining TSA in 9th grade. A senior at JHS, Maxine hopes to study electrical engineering at MIT.</p>
+            <p>Genevieve Menino teaches Interior Design, Child Development, and Foods classes at Juanita High School.</p>
+            <h6>Contact: 425 936-1600 ext. 61620 | gmenino@lwsd.org</h6>
         </div>
     </td>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/secretary.jpg" />
-        </div>
+        <h3>Ms. Harris</h3>
         <div class="course_info">
-            <h3>Secretary<br>David Brostek</h3>
-            <p>David, a member of TSA since junior high, is excited to be a member of this year's leadership. A junior at JHS, he plans to study computer science.</p>
+            <p>Jennifer Harris teaches Digital Design, Life and Finances, and DECA at Juanita High School.</p>
+            <h6>Contact: 425 936-1600 ext. 53695 | jharris@lwsd.org</h6>
         </div>
     </td>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/treasurer.jpg" />
-        </div>
+        <h3>Ms. Artz</h3>
         <div class="course_info">
-            <h3>Treasurer<br>Diego Alvarez</h3>
-            <p>Diego has previously served as JHS's Sergeant at Arms. A TSA member since 10th grade and a Juanita senior, he plans to study mechanical engineering and music composition.</p>
+            <p>Melanie Artz teaches Photography and Yearbook at Juanita High School.</p>
+            <h6>Contact: 425 936-1600 ext. 61621 | martz@lwsd.org</h6>
         </div>
     </td>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/reporter.jpg" />
-        </div>
+        <h3>Ms. MacMurray-Hauk</h3>
         <div class="course_info">
-            <h3>Reporter<br>Fedor Pogulsky</h3>
-            <p>A member of TSA since his sophomore year and a senior at Juanita, Fedor loves working toward each year's state competition. He's excited to be a member of this year's leadership and plans to study chemistry in college.</p>
+            <p>Elizabeth McMurray-Hauk (or "Mac") teaches theater courses, including Sound and Lighting and Costume Design.</p>
+            <h6>Contact: 425 936-1600 ext. 61638 | emcmurray-hauk@lwsd.org</h6>
         </div>
     </td>
     <td class="course_block">
-        <div class="image_block">
-            <img src="public/images/sergeantatarms.jpg" />
-        </div>
+        <h3>Ms. Steward</h3>
         <div class="course_info">
-            <h3>Sergeant at Arms<br>Nico Grataama</h3>
-            <p>Nico, a member of TSA since junior high, can't wait to keep order at TSA meetings. A junior at JHS and an avid lover of video games, he plans to study computer science.</p>
+            <p>Miranda Steward teaches Photography at Juanita High School.</p>
+            <h6>Contact: 425 936-1600 ext. 53606  | msteward@lwsd.org</h6>
+        </div>
+    </td>
+    <td class="course_block">
+        <h3>Mr. Bottman</h3>
+        <div class="course_info">
+            <p>Peter Bottman teaches Psychology, AP Psychology, and Foods classes at Juanita High School.</p>
+            <h6>Contact: 425 936-1600 ext. 53697 | pbottman@lwsd.org</h6>
         </div>
     </td>
 </table>
