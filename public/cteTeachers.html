@@ -3,54 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Officers | JHS TSA Chapter</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <?php include_once("testCTEBlocks6.html"); ?>
-    <script>
-        $(document).ready(function() {
-
-            $("td.course_block").hover(function () {
-                var $info = $(this).find("p");
-                var $contact = $(this).find("h6");
-                var $title = $(this).children("h3");
-                $title.animate({
-                    fontSize: "1em"
-                }, 200);
-
-                $info.delay(50).animate({
-                    fontSize: "1.15em",
-                    marginRight: "2%"
-                }, 150);
-                $contact.delay(50).animate({
-                    fontSize: "1.15em",
-                    marginRight: "2%"
-                }, 150);
-                $(this).css("box-shadow", "0px 0px 10px #FFEE9B");
-
-
-            }, function() {
-                var $info = $(this).find("p");
-                var $contact = $(this).find("h6");
-                var $title = $(this).children("h3");
-                var $block = $(this).find(".course_info");
-                $title.animate({
-                    fontSize: "2.5em"
-                }, 200);
-
-                $info.delay(50).animate({
-                    fontSize: "1em",
-                    marginLeft: "5%",
-                    marginRight: "15%"
-                }, 150);
-                $contact.delay(50).animate({
-                    fontSize: "1em",
-                    marginLeft: "5%",
-                    marginRight: "15%"
-                }, 150);
-                $(this).css("box-shadow", "0px 0px 0px #370031");
-
-            });
-        });
-    </script>
     <style>
         td.course_block {
             text-align: left;
